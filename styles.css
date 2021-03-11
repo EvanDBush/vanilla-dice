@@ -1,0 +1,135 @@
+
+/* Type Selectors ------------------------------ */
+
+html {
+    background: linear-gradient(to bottom, #603e21, #603e21 60%, #241401 90%);
+        /* Why does this repeat?  */
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffe4a3;
+    background: linear-gradient(to bottom, #603e21, #603e21 60%, #241401 90%);
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 4em;
+    text-shadow: 5px -5px 5px #241401;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+/* ID Selectors ----------------------------- */
+
+
+
+
+/* Class Selectors --------------------------- */
+
+.container {
+    /* display:flex;
+    flex-wrap: wrap;
+    flex-direction: row; */
+    
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 25% 25% 25%;
+    column-gap: 5%;
+    row-gap: 5%;
+    justify-items: center;
+    
+}
+
+.item-a {
+    align-self: center;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.item-b {
+    align-self: center;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.item-c {
+    align-self: center;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.item-d {
+    align-self: center;
+    grid-column: 2;
+    grid-row: 2;
+}
+.item-e {
+    align-self: center;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.item-f {
+    align-self: center;
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.dice {
+    
+    width: fit-content;
+    margin: 15px 15px 15px 15px;
+    border: thick solid #241401;
+    border-radius: 15px;
+}
+
+.highlight {
+    margin: 15px 15px 15px 15px;
+    border: thick solid #ffe4a3;
+    border-radius: 15px;
+}
+
+.btn {
+    background: #603e21;
+    color: #ffbc85;
+    font-size: 20px;
+    font-weight: bold;	
+    border: medium solid #ffbc85;
+    border-radius: 15px;
+    padding: 15px 15px 15px 15px;
+}
+
+/* Pseudo-class Selectors ------------------------------- */
+
+
+.btn:hover {
+    background: #ffe4a3;
+    color: #603e21;
+}
+
+.dice:hover {
+    border: thick solid #ffbc85;
+    transform: scale(1.1);
+    border-radius: 15px;
+}
+
+
+
+/* Media Queries -------------------------------------- */
+
+
+
+/* Color Pallet --------------------------------------- */
+
+.food {
+    color: #241401;	
+    color: #2d1b08;
+    color: #3c220c;	
+    color: #4f3017;	
+    color: #603e21;	
+    color: #ffbc85;
+    color: #f8d6ba;
+}
