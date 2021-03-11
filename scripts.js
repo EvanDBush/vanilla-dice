@@ -6,7 +6,7 @@ for (let i=0; i < 6; i++) {
 
     randomArray.push(Math.floor(Math.random() *6) + 1)
 
-    document.querySelector('.face' + i).setAttribute("src","img/dice" + randomArray [i] + ".svg");
+    document.querySelector('.face' + i).setAttribute("src","img/small-dice/dice" + randomArray [i] + ".svg");
 }
 };
 
