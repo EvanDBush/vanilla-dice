@@ -14,12 +14,13 @@ body {
 }
 
 h1 {
-    font-size: 3em;
+    margin-top: 0;
+    font-size: 2em;
     text-shadow: 5px -5px 5px #241401;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1em;
 }
 
 /* ID Selectors ----------------------------- */
@@ -100,8 +101,10 @@ h2 {
     font-weight: bold;	
     border: medium solid #ffbc85;
     border-radius: 15px;
-    padding: 15px 15px 15px 15px;
-    margin: 15%;
+    padding: 10px 10px 10px 10px;
+    margin: 20% 3% 20% 3%;
+
+    
 }
 
 /* Pseudo-class Selectors ------------------------------- */
@@ -122,8 +125,33 @@ h2 {
 
 /* Media Queries -------------------------------------- */
 
+@media (max-width: 310px) {
+    
+    h1 {
+        display: none;
+    }
+
+    .container {
+        display: block;
+        margin: 5px;
+    }
+    
+    btn {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 @media (min-width: 500px) {
 
+    h1 {
+        text-size: 3em;
+    }
+
+    h2 {
+        text-size: 2em;
+    }
+    
     .container {
         /* display:flex;
         flex-wrap: wrap;
@@ -185,6 +213,8 @@ h2 {
         
     }
 }
+
+
 
 /* Color Pallet --------------------------------------- */
 
