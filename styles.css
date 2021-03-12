@@ -37,9 +37,9 @@ h2 {
     
     display: grid;
     grid-template-columns: auto 155px 155px auto;
-    grid-template-rows: 155px 155px 155px;
+    grid-template-rows: 155px 155px 155px 155px;
     column-gap: 5%;
-    row-gap: 5%;
+    row-gap: 3%;
     justify-items: center;
     
     
@@ -80,6 +80,18 @@ h2 {
     grid-row: 3;
 }
 
+.item-g {
+    align-self: start;
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.item-h {
+    align-self: start;
+    grid-column: 3;
+    grid-row: 4;
+}
+
 .dice {
     
     width: fit-content;
@@ -96,15 +108,14 @@ h2 {
 
 .btn {
     background: #603e21;
+    width: 90%;
+    height: 50%;
     color: #ffbc85;
     font-size: 20px;
     font-weight: bold;	
     border: medium solid #ffbc85;
     border-radius: 15px;
-    padding: 10px 10px 10px 10px;
-    margin: 20% 3% 20% 3%;
-
-    
+    padding: 10px 10px 10px 10px;     
 }
 
 /* Pseudo-class Selectors ------------------------------- */
@@ -145,11 +156,11 @@ h2 {
 @media (min-width: 500px) {
 
     h1 {
-        text-size: 3em;
+        font-size: 3em;
     }
 
     h2 {
-        text-size: 2em;
+        font-size: 2em;
     }
     
     .container {
@@ -159,7 +170,7 @@ h2 {
         
         display: grid;
         grid-template-columns: auto 155px 155px 155px auto;
-        grid-template-rows: auto 155px 155px auto;
+        grid-template-rows: auto 155px 155px 155px auto;
         column-gap: 7%;
         row-gap: 7%;
         justify-items: center;
@@ -201,12 +212,23 @@ h2 {
         grid-row: 3;
     }
     
+    .item-g {
+        align-items: center;
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    .item-h {
+        align-self: start;
+        grid-column: 3;
+        grid-row: 4;
+    }
 }
 
 @media (min-width: 1000px) {
 
     h1 {
-        text-size: 4em;
+        font-size: 4em;
     }
 
     .container {

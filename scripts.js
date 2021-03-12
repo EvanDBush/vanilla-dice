@@ -1,20 +1,39 @@
-var randomArray = [];
+let randomArray = [];
 
 function rollDice () {
-    var randomArray = [] 
+    let randomArray = [] 
 for (let i=0; i < 6; i++) {
 
     randomArray.push(Math.floor(Math.random() *6) + 1)
 
     document.querySelector('.face' + i).setAttribute("src","img/small-dice/dice" + randomArray [i] + ".svg");
 }
+
+console.log(randomArray);
+
 };
 
-
-function holdDice (dice, highlight) {
-    var dice = document.getElementById('seis');
+// function holdDice (dice, highlight) {
+//     let dice = document.getElementById('seis');
     
-};
+// };
+
+
+// let score = 0;
+
+// randomarray.forEach(element => {
+//     if [i] = 1 {
+//         score += 100
+//     };
+
+//     if [i] = 5 {
+//         score += 50
+//     };
+
+//     console.log(score)
+// }); 
+
+
 
 
 // attmpt 3
