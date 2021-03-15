@@ -14,7 +14,6 @@ body {
 }
 
 h1 {
-    margin-top: 0;
     font-size: 2em;
     text-shadow: 5px -5px 5px #241401;
 }
@@ -23,9 +22,6 @@ h2 {
     font-size: 1em;
 }
 
-h3 {
-    padding-top: 0%;
-}
 
 /* ID Selectors ----------------------------- */
 
@@ -129,6 +125,14 @@ h3 {
     border-radius: 15px;
     padding: 10px 10px 10px 10px;
     margin: 5px 10px 5px 10px;      
+}
+
+#normal {
+	filter: invert(0%);
+}
+
+#inverted {
+	filter: invert(100%);
 }
 
 /* Pseudo-class Selectors ------------------------------- */

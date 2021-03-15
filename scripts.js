@@ -1,17 +1,48 @@
 let randomArray = [];
+var myRoll = Math.floor(Math.random() *6) + 1;
 
 function rollDice () {
-    let randomArray = [] 
+    let randomArray = [];
+    var totalNumber = 0;
 for (let i=0; i < 6; i++) {
+    var myRoll = Math.floor(Math.random() *6) + 1;
+    
+    randomArray.push(myRoll);
+    totalNumber += myRoll;
 
-    randomArray.push(Math.floor(Math.random() *6) + 1)
-
+    // randomArray.push(Math.floor(Math.random() *6) + 1)
     document.querySelector('.face' + i).setAttribute("src","img/small-dice/dice" + randomArray [i] + ".svg");
+   // console.log(totalNumber);
 }
 
 console.log(randomArray);
+console.log(totalNumber);
 
 };
+
+
+
+// function invertToggle () {
+
+//     let normalClass = document.querySelector("#normal");
+//     let invertColor = normalClass.setAttribute("id", "#inverted");
+//     let restoreColor = invertedClass.setAttribute("id", "#normal");    
+
+
+//     if document.getElementById() = (normalClass) {
+//         invertColor;
+//     };
+
+
+
+//     if (null) {
+//         restoreColor;
+//     };
+
+    
+    
+// };
+
 
 // function holdDice (dice, highlight) {
 //     let dice = document.getElementById('seis');
