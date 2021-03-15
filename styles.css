@@ -164,7 +164,7 @@ h2 {
         margin: 5px;
     }
     
-    btn {
+    .btn {
         margin-left: 0;
         margin-right: 0;
     }
@@ -191,6 +191,7 @@ h2 {
         column-gap: 7%;
         row-gap: 7%;
         justify-items: center;
+        margin: 5%;
         
     }
     

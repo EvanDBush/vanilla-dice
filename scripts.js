@@ -1,24 +1,56 @@
 let randomArray = [];
 var myRoll = Math.floor(Math.random() *6) + 1;
 
+const totalPlayers = parseInt(prompt('How many players are there? (1-8)'));
+
+for (let j=0; j < totalPlayers; j++) {
+
+    let playerName = prompt('Enter a name for Player' + (j+1));
+    
+    console.log(playerName, typeof playerName);
+    
+    document.querySelector(`#player${j + 1}`).innerHTML = playerName;
+
+}; 
+
+for (let j= 8; j > totalPlayers; j= j-1) {
+    document.querySelector(`#item-${j}`).style.display = "none";
+};
+
+
+
 function rollDice () {
     let randomArray = [];
-    var totalNumber = 0;
+    var rollScore = 0;
+
 for (let i=0; i < 6; i++) {
+    
     var myRoll = Math.floor(Math.random() *6) + 1;
     
     randomArray.push(myRoll);
-    totalNumber += myRoll;
-
     // randomArray.push(Math.floor(Math.random() *6) + 1)
+    
+    
     document.querySelector('.face' + i).setAttribute("src","img/small-dice/dice" + randomArray [i] + ".svg");
-   // console.log(totalNumber);
+    // console.log(totalNumber);
 }
+    randomArray.sort();
+
+    // if (randomArray[0].valueof) = 1 {
+    //     rollScore += 100;
+
+    // };
+
+    // document.querySelector(`#player${i + 1}`).p.innertext = rollscore; 
 
 console.log(randomArray);
-console.log(totalNumber);
+console.log(rollScore);
 
 };
+
+
+
+
 
 
 
