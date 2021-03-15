@@ -1,7 +1,11 @@
 let randomArray = [];
 var myRoll = Math.floor(Math.random() *6) + 1;
 
-const totalPlayers = parseInt(prompt('How many players are there? (1-8)'));
+
+
+function addPlayers () {
+
+    const totalPlayers = parseInt(prompt('How many players are there? (1-8)'));
 
 for (let j=0; j < totalPlayers; j++) {
 
@@ -16,7 +20,7 @@ for (let j=0; j < totalPlayers; j++) {
 for (let j= 8; j > totalPlayers; j= j-1) {
     document.querySelector(`#item-${j}`).style.display = "none";
 };
-
+};
 
 
 function rollDice () {
