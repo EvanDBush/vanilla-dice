@@ -153,6 +153,11 @@ h2 {
     border-radius: 15px;
 }
 
+.highlight:hover {
+    border: thick solid #ffe4a3;
+    transform: scale(1.1);
+    border-radius: 15px;
+}
 
 
 /* Media Queries -------------------------------------- */
