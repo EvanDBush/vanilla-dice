@@ -4,6 +4,8 @@ let randomArray = [];
 var myRoll = Math.floor(Math.random() *6) + 1;
 var rollScore = 0;
 
+document.querySelector("#roll-score").innertext = `${rollScore}`; 
+
 // ---------------------------- Create player object to keep score? ---------------------------------
 let gamePlayers = {
     playerName: player1,
@@ -49,12 +51,11 @@ for (let i=0; i < 6; i++) {
     
     randomArray.push(myRoll);
     
-    // 
-    
+    if (document.getElementById(`dice + (${i}+1)`).className === "dice") {
     
     document.querySelector('.face' + i).setAttribute("src","img/small-dice/face" + randomArray [i] + ".svg");
-    // console.log(totalNumber);
-}
+    }
+};
     randomArray.sort();
 
     // Theres something wrong with the way im writng this...replaces [0] with 1 instead of evaluating.
@@ -62,7 +63,7 @@ for (let i=0; i < 6; i++) {
         rollScore += 100;
 };
 
-    document.querySelector("#roll-score").innertext = `${rollScore}`; 
+   
 
 console.log(randomArray);
 console.log(rollScore);
@@ -81,12 +82,12 @@ let heldDice = [
 
 
 // ------------------------------ highlights dice on click -----------------------------------------
-const dice1 = "uno";
-const dice2 = "dos";
-const dice3 = "tres";
-const dice4 = "quattro";
-const dice5 = "cinco";
-const dice6 = "seis";
+const dice1 = "dice-1";
+const dice2 = "dice-2";
+const dice3 = "dice-3";
+const dice4 = "dice-4";
+const dice5 = "dice-5";
+const dice6 = "dice-6";
 
 
 function clickHighlight(dice1) {
