@@ -51,7 +51,7 @@ for (let i=0; i < 6; i++) {
     
     randomArray.push(myRoll);
     
-    if (document.getElementById(`dice + (${i}+1)`).className === "dice") {
+        if (document.getElementById("dice"+ (i+1)).className === "dice") {
     
     document.querySelector('.face' + i).setAttribute("src","img/small-dice/face" + randomArray [i] + ".svg");
     }
@@ -82,12 +82,12 @@ let heldDice = [
 
 
 // ------------------------------ highlights dice on click -----------------------------------------
-const dice1 = "dice-1";
-const dice2 = "dice-2";
-const dice3 = "dice-3";
-const dice4 = "dice-4";
-const dice5 = "dice-5";
-const dice6 = "dice-6";
+const dice1 = "dice1";
+const dice2 = "dice2";
+const dice3 = "dice3";
+const dice4 = "dice4";
+const dice5 = "dice5";
+const dice6 = "dice6";
 
 
 function clickHighlight(dice1) {
