@@ -16,7 +16,7 @@ for (let i=0; i < 6; i++) {
     // randomArray.push(Math.floor(Math.random() *6) + 1)
     
     
-    document.querySelector('.face' + i).setAttribute("src","img/small-dice/dice" + randomArray [i] + ".svg");
+    document.querySelector('.face' + i).setAttribute("src","img/small-dice/face" + randomArray [i] + ".svg");
     // console.log(totalNumber);
 }
     randomArray.sort();
@@ -55,19 +55,20 @@ for (let j= 8; j > totalPlayers; j= j-1) {
 };
 
 // highlights dice on click
-const dice1 = document.getElementById("uno");
-const dice2 = document.getElementById("dos");
-const dice3 = document.getElementById("tres");
-const dice4 = document.getElementById("quattro");
-const dice5 = document.getElementById("cinco");
-const dice6 = document.getElementById("seis");
+const dice1 = "uno";
+const dice2 = "dos";
+const dice3 = "tres";
+const dice4 = "quattro";
+const dice5 = "cinco";
+const dice6 = "seis";
 
-function clickHighlight() {
 
-    if (document.getElementById("uno").className === "dice") {
-        document.getElementById("uno").setAttribute("class","highlight"); 
+function clickHighlight(dice1) {
+
+    if (document.getElementById(dice1).className === "dice") {
+        document.getElementById(dice1).setAttribute("class","highlight"); 
     
-    } else {document.getElementById("uno").setAttribute("class", "dice");
+    } else {document.getElementById(dice1).setAttribute("class", "dice");
 };
 };
 
