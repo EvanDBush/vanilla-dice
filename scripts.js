@@ -2,6 +2,7 @@
 // ---------------------------- Array of Random NUmbers --------------------------------------------
 let randomArray = [];
 var myRoll = Math.floor(Math.random() *6) + 1;
+var rollScore = 0;
 
 // ---------------------------- Create player object to keep score? ---------------------------------
 let gamePlayers = {
@@ -12,16 +13,6 @@ let gamePlayers = {
     //roll history?
 
 }
-
-// ---------------------------- Trying to set up a way to hold dice from roll dice function, while keeping their position/image. --------------------
-let heldDice = [
-    [randomArray[0], true],
-    [randomArray[1], true],
-    [randomArray[2], true],
-    [randomArray[3], true],
-    [randomArray[4], true],
-    [randomArray[5], true],
-];
 
 // -------------------------------- Adds Player Names to Score grid -----------------------------------------------
 
@@ -52,8 +43,6 @@ for (let j= 8; j > totalPlayers; j= j-1) {
 function rollDice () {
     let randomArray = [];
 
-    var rollScore = 0;
-
 for (let i=0; i < 6; i++) {
     
     var myRoll = Math.floor(Math.random() *6) + 1;
@@ -68,17 +57,27 @@ for (let i=0; i < 6; i++) {
 }
     randomArray.sort();
 
-    if (randomArray[0] = 1) {
+    // Theres something wrong with the way im writng this...replaces [0] with 1 instead of evaluating.
+    if (randomArray[0] === 1) {
         rollScore += 100;
 };
 
-    document.querySelector(`#item-${j + 1}`).p.innertext = `${rollscore}`; 
+    document.querySelector("#roll-score").innertext = `${rollScore}`; 
 
 console.log(randomArray);
 console.log(rollScore);
 
 };
 
+// ---------------------------- Trying to set up a way to hold dice from roll dice function, while keeping their position/image. --------------------
+let heldDice = [
+    [randomArray[0], true],
+    [randomArray[1], true],
+    [randomArray[2], true],
+    [randomArray[3], true],
+    [randomArray[4], true],
+    [randomArray[5], true],
+];
 
 
 // ------------------------------ highlights dice on click -----------------------------------------
