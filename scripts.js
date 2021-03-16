@@ -1,43 +1,33 @@
 
-// Array of Random NUmbers
+// ---------------------------- Array of Random NUmbers --------------------------------------------
 let randomArray = [];
 var myRoll = Math.floor(Math.random() *6) + 1;
 
-//assigns dice SVGs to Array of Random Numbers
-function rollDice () {
-    let randomArray = [];
-    var rollScore = 0;
+// ---------------------------- Create player object to keep score? ---------------------------------
+let gamePlayers = {
+    playerName: player1,
+    rollScore: 0,
+    totalScore: 0,
+    heldDice: [],
+    //roll history?
 
-for (let i=0; i < 6; i++) {
-    
-    var myRoll = Math.floor(Math.random() *6) + 1;
-    
-    randomArray.push(myRoll);
-    // randomArray.push(Math.floor(Math.random() *6) + 1)
-    
-    
-    document.querySelector('.face' + i).setAttribute("src","img/small-dice/face" + randomArray [i] + ".svg");
-    // console.log(totalNumber);
 }
-    randomArray.sort();
 
-    // if (randomArray[0]) = 1 {
-    //     rollScore += 100;
+// ---------------------------- Trying to set up a way to hold dice from roll dice function, while keeping their position/image. --------------------
+let heldDice = [
+    [randomArray[0], true],
+    [randomArray[1], true],
+    [randomArray[2], true],
+    [randomArray[3], true],
+    [randomArray[4], true],
+    [randomArray[5], true],
+];
 
-    //};
-
-    // document.querySelector(`#player${j + 1}`).p.innertext = `${rollscore}`; 
-
-console.log(randomArray);
-console.log(rollScore);
-
-};
-
-//Adds Player Names to Score grid
+// -------------------------------- Adds Player Names to Score grid -----------------------------------------------
 
 function addPlayers () {
 
-    const totalPlayers = parseInt(prompt('How many players are there? (1-8)'));
+    const totalPlayers = parseInt(prompt('How many players? (1-8)'));
 
 for (let j=0; j < totalPlayers; j++) {
 
@@ -54,7 +44,44 @@ for (let j= 8; j > totalPlayers; j= j-1) {
 };
 };
 
-// highlights dice on click
+
+
+// ----------------------------- Assigns dice SVGs to Array of Random Numbers ------------------------------------
+
+
+function rollDice () {
+    let randomArray = [];
+
+    var rollScore = 0;
+
+for (let i=0; i < 6; i++) {
+    
+    var myRoll = Math.floor(Math.random() *6) + 1;
+    
+    randomArray.push(myRoll);
+    
+    // 
+    
+    
+    document.querySelector('.face' + i).setAttribute("src","img/small-dice/face" + randomArray [i] + ".svg");
+    // console.log(totalNumber);
+}
+    randomArray.sort();
+
+    if (randomArray[0] = 1) {
+        rollScore += 100;
+};
+
+    document.querySelector(`#item-${j + 1}`).p.innertext = `${rollscore}`; 
+
+console.log(randomArray);
+console.log(rollScore);
+
+};
+
+
+
+// ------------------------------ highlights dice on click -----------------------------------------
 const dice1 = "uno";
 const dice2 = "dos";
 const dice3 = "tres";
