@@ -19,6 +19,8 @@ h1 {
 }
 
 h2 {
+    text-align: center;
+    margin: 10px;
     font-size: 1em;
 }
 
@@ -109,6 +111,8 @@ h2 {
 }
 
 .highlight {
+
+    width: fit-content;
     margin: 15px 15px 15px 15px;
     border: thick solid #ffe4a3;
     border-radius: 15px;

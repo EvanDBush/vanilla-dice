@@ -1,6 +1,25 @@
 let randomArray = [];
 var myRoll = Math.floor(Math.random() *6) + 1;
 
+const dice1 = document.getElementById("uno");
+const dice2 = document.getElementById("dos");
+const dice3 = document.getElementById("tres");
+const dice4 = document.getElementById("quattro");
+const dice5 = document.getElementById("cinco");
+const dice6 = document.getElementById("seis");
+
+function clickHighlight(element) {
+
+    console.log(element);
+
+    if (element.className === "dice") {
+        element.setAttribute("class","highlight"); 
+    };
+
+    else {
+        element.setAttribute("class", "dice");
+};
+};
 
 
 function addPlayers () {
@@ -40,12 +59,12 @@ for (let i=0; i < 6; i++) {
 }
     randomArray.sort();
 
-    // if (randomArray[0].valueof) = 1 {
+    // if (randomArray[0]) = 1 {
     //     rollScore += 100;
 
-    // };
+    //};
 
-    // document.querySelector(`#player${i + 1}`).p.innertext = rollscore; 
+    // document.querySelector(`#player${j + 1}`).p.innertext = `${rollscore}`; 
 
 console.log(randomArray);
 console.log(rollScore);
