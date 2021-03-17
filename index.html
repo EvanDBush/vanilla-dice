@@ -9,7 +9,8 @@
 </head>
 <body>
     
-    <h1>Vanilla Dice</h1>
+    <h1 id="top">Vanilla Dice</h1>
+    <h5 id="resetbtn" onclick="resetDice()">Dice Reset</h5>
     
     <div class="container">
        
@@ -72,57 +73,63 @@
         </div>
         
         <div class="item-h">
-                <h3>Score: </h3>
-                <h3 id="roll-score">0</h3>
+                <h3>Enter Score: </h3>
+                <div id="roll-score">
+                    <input type="text" id="score-input" name="scorebox">
+                    <button type="button" class="btn" id="score-submit" onclick="inputScore()">Bank Score </button> 
+                </div>
         
         </div>
     </div>
 
-    <h2>Players</h2>
     
-    <div class="container">
+    
+    <div class="container" id="second-container">
+    
         
-        <div class="btn, item-a" id="item-1">
+        
+        <div class="item-a" id="item-1">
              <h3 id="player1">Player1</h3>
-             <p></p>
+             <h3 id="p1-points">0</h3>
         </div>
 
-        <div class="btn, item-b" id="item-2">
+        <div class="item-b" id="item-2">
              <h3 id="player2">Player2</h3>
-             <p></p>    
+             <h3 id="p2-points">0</h3>   
         </div>
 
-        <div class="btn, item-c" id="item-3">
+        <div class="item-c" id="item-3">
              <h3 id="player3">Player3</h3>
-             <p></p>
+             <h3 id="p3-points">0</h3>
         </div>
 
-        <div class="btn, item-d" id="item-4">
+        <div class="item-d" id="item-4">
              <h3 id="player4">Player4</h3>
-             <p></p>
+             <h3 id="p4-points">0</h3>
         </div>
 
-        <div class="btn, item-e" id="item-5">
+        <div class="item-e" id="item-5">
              <h3 id="player5">Player5</h3>
-             <p></p>
+             <h3 id="p5-points">0</h3>
         </div>
 
-        <div class="btn, item-f" id="item-6">
+        <div class="item-f" id="item-6">
              <h3 id="player6">Player6</h3>
-             <p></p>
+             <h3 id="p6-points">0</h3>
         </div>
 
-        <div class="btn, item-g" id="item-7">
+        <div class="item-g" id="item-7">
              <h3 id="player7">Player7</h3>
-             <p></p>
+             <h3 id="p7-points">0</h3>
         </div>
 
-        <div class="btn, item-h" id="item-8">
+        <div class="item-h" id="item-8">
              <h3 id="player8">Player8</h3>
+             <h3 id="p8-points">0</h3>
         </div>
     </div>
    
-    
+    <h3><a href="#top">Back to top</a></h3>
   
 </body>
 </html>

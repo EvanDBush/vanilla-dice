@@ -4,7 +4,7 @@ let randomArray = [];
 var myRoll = Math.floor(Math.random() *6) + 1;
 var rollScore = 0;
 
-document.querySelector("#roll-score").innertext = `${rollScore}`; 
+
 
 // ---------------------------- Create player object to keep score? ---------------------------------
 let gamePlayers = {
@@ -58,12 +58,10 @@ for (let i=0; i < 6; i++) {
 };
     randomArray.sort();
 
-    // Theres something wrong with the way im writng this...replaces [0] with 1 instead of evaluating.
+    
     if (randomArray[0] === 1) {
         rollScore += 100;
 };
-
-   
 
 console.log(randomArray);
 console.log(rollScore);
@@ -99,7 +97,15 @@ function clickHighlight(dice1) {
 };
 };
 
+// ------------------------------ creates rest button --------------------------------------------
 
+document.getElementById("resetbtn").addEventListener("click", resetDice());
 
+function resetDice() {
 
+    document.querySelectorAll(".highlight").setAttribute("class", "dice");
+
+};
+
+//document.querySelector("#roll-score").innertext = `${rollScore}`; 
 

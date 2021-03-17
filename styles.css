@@ -14,14 +14,27 @@ body {
 }
 
 h1 {
+    display: inline;
     font-size: 2em;
     text-shadow: 5px -5px 5px #241401;
 }
 
 h2 {
     text-align: center;
-    margin: 10px;
+    padding: 0px 20% 0px 20%;
+    margin-top: 30px;
     font-size: 1em;
+}
+
+h5 {
+    display: inline;
+    position: relative;
+    left: 60px;
+    bottom: 10px;
+    border: solid thin #f8d6ba;
+    padding: 5px;
+    border-radius: 5px;
+    
 }
 
 
@@ -33,9 +46,6 @@ h2 {
 /* Class Selectors --------------------------- */
 
 .container {
-    /* display:flex;
-    flex-wrap: wrap;
-    flex-direction: row; */
     
     display: grid;
     grid-template-columns: auto 155px 155px auto;
@@ -89,20 +99,22 @@ h2 {
 }
 
 .item-h {
-    background: #603e21;
+    /* background: #603e21;
     border: medium solid #ffbc85;
     border-radius: 15px;
+    color:  #ffbc85;
     padding: 2%;
     margin: 2%;
     width: 100%;
-    height: 60%;
-    color:  #ffbc85;
+    height: 60%; */
+    
     align-self: start;
     grid-column: 3;
     grid-row: 4;
 }
 
-.dice {
+.dice,
+.inert {
     
     width: fit-content;
     margin: 15px 15px 15px 15px;
@@ -110,7 +122,8 @@ h2 {
     border-radius: 15px;
 }
 
-.highlight {
+.highlight,
+.active {
 
     width: fit-content;
     margin: 15px 15px 15px 15px;
@@ -131,6 +144,12 @@ h2 {
     margin: 5px 10px 5px 10px;      
 }
 
+/* --------- Id Selectors ---------------------------------- */
+
+#second-container {
+    padding-top: 15%;
+}
+
 #normal {
 	filter: invert(0%);
 }
@@ -139,7 +158,17 @@ h2 {
 	filter: invert(100%);
 }
 
-/* Pseudo-class Selectors ------------------------------- */
+#score-input {
+    line-height: 2.5em;
+    border-radius: 15px;
+    align-content: center;
+    background: #ffe4a3;
+    font-weight: bolder;
+    font-size: .8em;
+    color: #603e21; 
+}
+
+/* ---------- Pseudo-class Selectors ------------------------------- */
 
 
 .btn:hover {
