@@ -164,6 +164,15 @@ h5 {
     margin: 5px 10px 5px 10px;      
 }
 
+.smallbtn {
+    border-radius: 25%;
+    width: 10%;
+    line-height: 150%;
+    font-size: 30px;
+    color: #ffbc85;
+    background: #603e21;
+}
+
 /* --------- Id Selectors ---------------------------------- */
 
 #second-container {
