@@ -26,11 +26,19 @@ h2 {
     font-size: 1em;
 }
 
+h3 {
+    align-self: center;
+    background-color: #603e21;
+    padding: 5px;
+    border-radius: 15px;
+}
+
 h5 {
     display: inline;
     position: relative;
     left: 60px;
     bottom: 10px;
+    
     border: solid thin #f8d6ba;
     padding: 5px;
     border-radius: 5px;
