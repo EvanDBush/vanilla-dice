@@ -103,9 +103,13 @@ document.getElementById("resetbtn").addEventListener("click", resetDice());
 
 function resetDice() {
 
-    document.querySelectorAll(".highlight").setAttribute("class", "dice");
-
+    for (let i=0; i < 6; i++) {
+    
+        if (document.getElementById("dice"+ (i+1)).className === "highlight") {
+        
+            document.querySelector(".highlight").setAttribute("class", "dice")
+        };
+    };
 };
-
 //document.querySelector("#roll-score").innertext = `${rollScore}`; 
 
