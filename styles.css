@@ -2,7 +2,7 @@
 /* Type Selectors ------------------------------ */
 
 html {
-    background: linear-gradient(to bottom, #603e21 45%, #ffbc85, #603e21);
+    background: linear-gradient(to bottom, #603e21 20%, #ffbc85, #603e21 95%);
 } 
 
 
@@ -19,15 +19,8 @@ h1 {
     text-shadow: 5px -5px 5px #241401;
 }
 
-h2 {
-    text-align: center;
-    padding: 0px 20% 0px 20%;
-    margin-top: 30px;
-    font-size: 1em;
-}
-
 h3 {
-    align-self: center;
+    
     background-color: #603e21;
     padding: 5px;
     border-radius: 15px;
@@ -36,7 +29,7 @@ h3 {
 h5 {
     display: inline;
     position: relative;
-    left: 60px;
+    left: 2em;
     bottom: 10px;
     
     border: solid thin #f8d6ba;
@@ -67,6 +60,7 @@ h5 {
 
 .item-a {
     align-self: center;
+    align-items: center;
     grid-column: 2;
     grid-row: 1;
 }
@@ -131,15 +125,23 @@ h5 {
 
 .inert {
     
-    width: 100%;
+    width: 90%;
     padding: 15px;
     margin: 15px 15px 15px 15px;
     border: thick solid #241401;
     border-radius: 15px;
 }
 
-.highlight,
 .active {
+
+    width: 90%;
+    padding: 15px;
+    margin: 15px 15px 15px 15px;
+    border: thick solid #ffe4a3;
+    border-radius: 15px;
+}
+
+.highlight {
 
     width: fit-content;
     margin: 15px 15px 15px 15px;
@@ -292,8 +294,8 @@ h5 {
     }
 
     .item-h {
-        align-self: start;
-        grid-column: 3;
+        align-self: center;
+        grid-column: 4;
         grid-row: 4;
     }
 }
