@@ -15,6 +15,7 @@ body {
 
 h1 {
     display: inline;
+    text-align: center;
     font-size: 2em;
     text-shadow: 5px -5px 5px #241401;
 }
@@ -22,14 +23,14 @@ h1 {
 h3 {
     
     background-color: #603e21;
+    text-align: center;
     padding: 5px;
     border-radius: 15px;
 }
 
 h5 {
-    display: inline;
+    display: inline-block;
     position: relative;
-    left: 2em;
     bottom: 10px;
     
     border: solid thin #f8d6ba;
@@ -125,7 +126,7 @@ h5 {
 
 .inert {
     
-    width: 90%;
+    width: 80%;
     padding: 15px;
     margin: 15px 15px 15px 15px;
     border: thick solid #241401;
@@ -134,7 +135,7 @@ h5 {
 
 .active {
 
-    width: 90%;
+    width: 80%;
     padding: 15px;
     margin: 15px 15px 15px 15px;
     border: thick solid #ffe4a3;
@@ -166,7 +167,9 @@ h5 {
 
 #second-container {
     padding-top: 15%;
-    margin-bottom: 50px;
+    margin-top: 10%;
+    margin-bottom: 80px;
+    row-gap: 3%;
 }
 
 #normal {
