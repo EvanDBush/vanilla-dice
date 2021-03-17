@@ -21,10 +21,11 @@ h1 {
 }
 
 h3 {
-    
+    display:inline;
+    width: 50%;
     background-color: #603e21;
     text-align: center;
-    padding: 5px;
+    padding: 2px 5px 2px 5px;;
     border-radius: 15px;
 }
 
@@ -126,19 +127,19 @@ h5 {
 
 .inert {
     
-    width: 80%;
-    padding: 15px;
+    width: 90%;
+    padding: 2px;
     margin: 15px 15px 15px 15px;
-    border: thick solid #241401;
+    border: medium solid #241401;
     border-radius: 15px;
 }
 
 .active {
 
-    width: 80%;
-    padding: 15px;
+    width: 90%;
+    padding: 2px;
     margin: 15px 15px 15px 15px;
-    border: thick solid #ffe4a3;
+    border: medium solid #ffe4a3;
     border-radius: 15px;
 }
 
@@ -169,15 +170,7 @@ h5 {
     padding-top: 15%;
     margin-top: 10%;
     margin-bottom: 80px;
-    row-gap: 3%;
-}
-
-#normal {
-	filter: invert(0%);
-}
-
-#inverted {
-	filter: invert(100%);
+    row-gap: 2%;
 }
 
 #score-input {
