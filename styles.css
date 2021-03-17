@@ -2,14 +2,14 @@
 /* Type Selectors ------------------------------ */
 
 html {
-    background: linear-gradient(to bottom, #603e21, #603e21 60%, #241401 90%);
-        /* Why does this repeat?  */
-}
+    background: linear-gradient(to bottom, #603e21 45%, #ffbc85, #603e21);
+} 
+
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #ffe4a3;
-    background: linear-gradient(to bottom, #603e21, #603e21 60%, #241401 90%);
+    
     box-sizing: border-box;
 }
 
@@ -113,10 +113,18 @@ h5 {
     grid-row: 4;
 }
 
-.dice,
-.inert {
+.dice {
     
     width: fit-content;
+    margin: 15px 15px 15px 15px;
+    border: thick solid #241401;
+    border-radius: 15px;
+}
+
+.inert {
+    
+    width: 100%;
+    padding: 15px;
     margin: 15px 15px 15px 15px;
     border: thick solid #241401;
     border-radius: 15px;
@@ -148,6 +156,7 @@ h5 {
 
 #second-container {
     padding-top: 15%;
+    margin-bottom: 50px;
 }
 
 #normal {
