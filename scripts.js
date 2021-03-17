@@ -16,7 +16,7 @@ let gamePlayers = {
 
 }
 
-// -------------------------------- Adds Player Names to Score grid -----------------------------------------------
+// ----------------------------- Adds Player Names to Score grid -----------------------------------------------
 
 function addPlayers () {
 
@@ -111,5 +111,12 @@ function resetDice() {
         };
     };
 };
-//document.querySelector("#roll-score").innertext = `${rollScore}`; 
 
+// ------------------------------- Submits score to player ----------------------
+
+function submitScore() {
+    // event.preventDefault();
+    const pointsElement = document.getElementById("p1-points");
+    const enteredScore = document.getElementById("score-input").value;
+    pointsElement.innerHTML += `${enteredScore}`;
+};
