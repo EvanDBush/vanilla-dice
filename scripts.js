@@ -117,6 +117,6 @@ function resetDice() {
 function submitScore() {
     // event.preventDefault();
     const pointsElement = document.getElementById("p1-points");
-    const enteredScore = document.getElementById("score-input").value;
-    pointsElement.innerHTML += `${enteredScore}`;
+    let enteredScore = parseInt(document.getElementById("score-input").value);
+    pointsElement.innerHTML = enteredScore + parseInt(pointsElement.innerHTML);
 };
