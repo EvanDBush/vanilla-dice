@@ -118,10 +118,14 @@ function resetDice() {
 // ------------------------------- Submits score to player ----------------------
 
 let j = 0;
+if (document.querySelector(".active") === null) {
+    
+    document.getElementById("item-1").setAttribute("class", "active");
+};
 
 function submitScore() {
 
-    const playerElement = document.getElementById(("item-" + (j+1)));
+    const playerElement = document.getElementById("item-" + (j+1));
     const nextPlayer = document.getElementById("item-" + (j+2));
     
     const pointsElement = document.getElementById("p" + (j+1) + "-points");
@@ -134,9 +138,9 @@ function submitScore() {
     nextPlayer.setAttribute("class", "active");
     j = j + 1;
 
-    } else {
-        j = j * 0;
-        document.getElementById("item-1").setAttribute("class", "active");
+    // } else {
+    //     j = j * 0;
+    //     document.getElementById("item-1").setAttribute("class", "active");
     };
     
 };
