@@ -3,6 +3,7 @@
 let randomArray = [];
 var myRoll = Math.floor(Math.random() *6) + 1;
 var rollScore = 0;
+let totalPlayers = 8;
 // const totalPlayers = parseInt(prompt('How many players? (1-8)'));
 
 
@@ -22,7 +23,7 @@ let gamePlayers = {
 
 function addPlayers () {
 
-    const totalPlayers = parseInt(prompt('How many players? (1-8)'));
+    let totalPlayers = parseInt(prompt('How many players? (1-8)'));
 
 for (let j=0; j < totalPlayers; j++) {
 
@@ -116,11 +117,28 @@ function resetDice() {
 
 // ------------------------------- Submits score to player ----------------------
 
+let j = 0;
+
 function submitScore() {
+
+    const playerElement = document.getElementById(("item-" + (j+1)));
+    const nextPlayer = document.getElementById("item-" + (j+2));
     
-    const pointsElement = document.getElementById("p1-points");
+    const pointsElement = document.getElementById("p" + (j+1) + "-points");
+    
     let enteredScore = parseInt(document.getElementById("score-input").value);
+    
+    if (j < totalPlayers) {
     pointsElement.innerHTML = enteredScore + parseInt(pointsElement.innerHTML);
+    playerElement.setAttribute("class", "inert");
+    nextPlayer.setAttribute("class", "active");
+    j = j + 1;
+
+    } else {
+        j = j * 0;
+        document.getElementById("item-1").setAttribute("class", "active");
+    };
+    
 };
 //highlight player1
 //submit score
