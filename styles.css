@@ -165,9 +165,9 @@ h5 {
 }
 
 .smallbtn {
-    border-radius: 25%;
-    width: 10%;
-    line-height: 150%;
+    border-radius: 50%;
+    width: 30px;
+    /* line-height: 150%; */
     font-size: 30px;
     color: #ffbc85;
     background: #603e21;
@@ -253,7 +253,7 @@ h5 {
         column-gap: 7%;
         row-gap: 7%;
         justify-items: center;
-        margin: 5%;
+        margin: 0%;
         
     }
     
@@ -302,6 +302,13 @@ h5 {
         align-self: center;
         grid-column: 4;
         grid-row: 4;
+    }
+
+    #second-container {
+        padding-top: 15%;
+        margin-top: 0%;
+        margin-bottom: 80px;
+        row-gap: 2%;
     }
 }
 
