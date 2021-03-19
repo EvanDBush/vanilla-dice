@@ -3,8 +3,8 @@
 let randomArray = [];
 var myRoll = Math.floor(Math.random() *6) + 1;
 var rollScore = 0;
-let totalPlayers = 8;
-// const totalPlayers = parseInt(prompt('How many players? (1-8)'));
+
+const totalPlayers = parseInt(prompt('How many players? (1-8)'));
 
 
 
@@ -82,7 +82,7 @@ let heldDice = [
 ];
 
 
-// ------------------------------ highlights dice on click -----------------------------------------
+// ------------------------------ Highlights dice on click -----------------------------------------
 const dice1 = "dice1";
 const dice2 = "dice2";
 const dice3 = "dice3";
@@ -100,7 +100,7 @@ function clickHighlight(dice1) {
 };
 };
 
-// ------------------------------ creates reset button --------------------------------------------
+// ------------------------------ creates highlighter reset button --------------------------------------------
 
 document.getElementById("resetbtn").addEventListener("click", resetDice());
 
