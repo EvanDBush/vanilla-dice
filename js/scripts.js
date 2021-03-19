@@ -22,6 +22,7 @@ let gamePlayers = {
 // ----------------------------- Adds Player Names to Score grid -----------------------------------------------
 
 function addPlayers () {
+    
 
     let totalPlayers = parseInt(prompt('How many players? (1-8)'));
 
@@ -38,7 +39,7 @@ for (let j=0; j < totalPlayers; j++) {
 for (let j= 8; j > totalPlayers; j= j-1) {
     document.querySelector(`#item-${j}`).style.display = "none";
 };
-    refreshlyrics();
+    
 
 };
 
@@ -48,6 +49,7 @@ for (let j= 8; j > totalPlayers; j= j-1) {
 
 
 function rollDice () {
+
     let randomArray = [];
 
 for (let i=0; i < 6; i++) {
@@ -68,7 +70,7 @@ for (let i=0; i < 6; i++) {
         rollScore += 100;
 };
 
-refreshlyrics();
+
 console.log(randomArray);
 console.log(rollScore);
 
@@ -103,20 +105,7 @@ function clickHighlight(dice1) {
 };
 };
 
-// ------------------------------ creates highlighter reset button --------------------------------------------
 
-document.getElementById("resetbtn").addEventListener("click", resetDice());
-
-function resetDice() {
-
-    for (let i=0; i < 6; i++) {
-    
-        if (document.getElementById("dice"+ (i+1)).className === "highlight") {
-        
-            document.querySelector(".highlight").setAttribute("class", "dice")
-        };
-    };
-};
 
 // ------------------------------- Submits score to player ----------------------
 
@@ -129,6 +118,7 @@ let j = 1;
 console.log("this is the starting J  (1)" + j)
 
 function submitScore() {
+    
 
     const playerElement = document.getElementById("item-" + j);
     const pointsElement = document.getElementById("p" + j + "-points");
@@ -164,8 +154,9 @@ function submitScore() {
         ;
         console.log("should be (1) after j reached" + j);
         console.log("after total player equal to J" + nextPlayer);
+        
 };
-    refreshlyrics();
+   
     document.getElementById("score-input").value = 0;
 
 };
@@ -230,3 +221,20 @@ function refreshlyrics () {
 };
 
 refreshlyrics();
+
+// ------------------------------ creates highlighter reset button --------------------------------------------
+
+document.getElementById("resetbtn").addEventListener("click", resetDice());
+document.getElementById("resetbtn").addEventListener("click", refreshlyrics());
+
+function resetDice() {
+    
+
+    for (let i=0; i < 6; i++) {
+    
+        if (document.getElementById("dice"+ (i+1)).className === "highlight") {
+        
+            document.querySelector(".highlight").setAttribute("class", "dice")
+        };
+    };
+};
