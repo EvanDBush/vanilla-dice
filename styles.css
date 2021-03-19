@@ -3,6 +3,7 @@
 
 html {
     background: linear-gradient(to bottom, #603e21 20%, #ffbc85, #603e21 95%);
+    /* opacity: 95%; */
 } 
 
 
@@ -173,11 +174,19 @@ h5 {
     background: #603e21;
 }
 
+.background {
+    /* z-index: -1; */
+    padding-top: 5%;
+    opacity: 90%;
+    color: #cc9263;
+    font-weight: bolder;
+}
+
 /* --------- Id Selectors ---------------------------------- */
 
 #second-container {
-    padding-top: 15%;
-    margin-top: 5%;
+    padding-top: 5%;
+    margin-top: 0%;
     margin-bottom: 10%;
     row-gap: 2%;
 }
