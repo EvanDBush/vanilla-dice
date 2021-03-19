@@ -117,34 +117,49 @@ function resetDice() {
 
 // ------------------------------- Submits score to player ----------------------
 
-let j = 0;
-if (document.querySelector(".active") === null) {
-    
-    document.getElementById("item-1").setAttribute("class", "active");
-};
+let j = 1;
+
+console.log("this is the starting J  (1)" + j)
+
 
 function submitScore() {
 
-    const playerElement = document.getElementById("item-" + (j+1));
-    const nextPlayer = document.getElementById("item-" + (j+2));
-    
-    const pointsElement = document.getElementById("p" + (j+1) + "-points");
+    const playerElement = document.getElementById("item-" + j);
+    const pointsElement = document.getElementById("p" + j + "-points");
     
     let enteredScore = parseInt(document.getElementById("score-input").value);
     
     if (j < totalPlayers) {
+
+    let nextPlayer = document.getElementById("item-" + (j+1));
+    
     pointsElement.innerHTML = enteredScore + parseInt(pointsElement.innerHTML);
     playerElement.setAttribute("class", "inert");
     nextPlayer.setAttribute("class", "active");
     j = j + 1;
-
-    // } else {
-    //     j = j * 0;
-    //     document.getElementById("item-1").setAttribute("class", "active");
-    };
     
+    console.log("nextPlayer is +1 J=" + j);
+    console.log(nextPlayer);
+    }
+
+    else {  
+        
+        j === totalPlayers;
+        console.log("total should be (8)" + j);
+        
+        
+        pointsElement.innerHTML = enteredScore + parseInt(pointsElement.innerHTML);
+        playerElement.setAttribute("class", "inert");
+        
+        j = 1;
+        
+        let nextPlayer = document.getElementById("item-" + j);
+        nextPlayer.setAttribute("class", "active");
+        ;
+        console.log("should be (1) after j reached" + j);
+        console.log("after total player equal to J" + nextPlayer);
 };
-//highlight player1
-//submit score
-// change to next player
-// clear score for next player
+
+};
+    
+
