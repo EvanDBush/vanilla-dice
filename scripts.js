@@ -166,5 +166,4 @@ function submitScore() {
     document.getElementById("score-input").value = 0;
 
 };
-    
 
