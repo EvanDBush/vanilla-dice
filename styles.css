@@ -24,7 +24,7 @@ h1 {
 h3 {
     display:inline;
     width: 50%;
-    background-color: #603e21;
+    
     text-align: center;
     padding: 2px 5px 2px 5px;;
     border-radius: 15px;
@@ -136,6 +136,7 @@ article {
     width: 90%;
     padding: 2px;
     margin: 15px 15px 15px 15px;
+    background-color: #603e21;
     border: medium solid #241401;
     border-radius: 15px;
 }
@@ -145,6 +146,7 @@ article {
     width: 90%;
     padding: 2px;
     margin: 15px 15px 15px 15px;
+    background-color: #603e21;
     border: medium solid #ffe4a3;
     border-radius: 15px;
 }
@@ -207,8 +209,8 @@ article {
     color: #603e21; 
 }
 
-#title {
-
+#display-box {
+    text-align: center;
 }
 
 /* ---------- Pseudo-class Selectors ------------------------------- */
