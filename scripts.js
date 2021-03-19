@@ -160,6 +160,8 @@ function submitScore() {
         console.log("after total player equal to J" + nextPlayer);
 };
 
+    document.getElementById("score-input").value = 0;
+
 };
     
 
