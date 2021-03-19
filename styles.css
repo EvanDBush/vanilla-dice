@@ -41,6 +41,11 @@ h5 {
     
 }
 
+article {
+    padding: 2%;
+
+}
+
 
 /* ID Selectors ----------------------------- */
 
@@ -186,8 +191,8 @@ h5 {
 /* --------- Id Selectors ---------------------------------- */
 
 #second-container {
-    padding-top: 5%;
-    margin-top: 0%;
+    padding: 5%;
+    margin: 1%;
     margin-bottom: 10%;
     row-gap: 2%;
 }
@@ -200,6 +205,10 @@ h5 {
     font-weight: bolder;
     font-size: .8em;
     color: #603e21; 
+}
+
+#title {
+
 }
 
 /* ---------- Pseudo-class Selectors ------------------------------- */
@@ -247,22 +256,27 @@ h5 {
 @media (min-width: 525px) {
 
     h1 {
-        font-size: 3em;
+        font-size: 2em;
     }
 
     h2 {
         font-size: 2em;
     }
 
+    header {
+        text-align: center
+    }
+
     main {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        padding: 2%;
     }
 
     article {
         flex-basis: auto ;
-        min-width: 200px;
+        min-width: 150px;
     }
     
     .to-top {
@@ -275,7 +289,7 @@ h5 {
 @media (min-width: 1000px) {
 
     h1 {
-        font-size: 4em;
+        font-size: 3em;
     }
 
     article {
@@ -347,9 +361,18 @@ h5 {
 
     #second-container {
         padding-top: 5%;
-        margin: 0% 0% 10% 50%;
+        margin: 0% 10% 10% 15%;
 
         row-gap: 2%;
+    }
+
+    .background {
+        /* z-index: -1; */
+        padding-top: 1%;
+        margin-top: 2%;
+        opacity: 90%;
+        color: #cc9263;
+        font-weight: bolder;
     }
 
 }
