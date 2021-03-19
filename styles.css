@@ -167,7 +167,8 @@ h5 {
 
 .smallbtn {
     border-radius: 50%;
-    width: 30px;
+    width: 40px;
+    height: 40px;
     /* line-height: 150%; */
     font-size: 30px;
     color: #ffbc85;
