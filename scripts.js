@@ -117,10 +117,13 @@ function resetDice() {
 
 // ------------------------------- Submits score to player ----------------------
 
+
+
+
+
 let j = 1;
 
 console.log("this is the starting J  (1)" + j)
-
 
 function submitScore() {
 
