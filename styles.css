@@ -131,6 +131,14 @@ article {
     border-radius: 15px;
 }
 
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
 .inert {
     
     width: 90%;
@@ -215,11 +223,13 @@ article {
 }
 
 #rule-box {
-    display: none;
+    
+    min-width: 300px;
     background-color: #cc9263;
+    border: thick solid #241401;
     border-radius: 15px;
     padding: 3%;
-    margin-top: 5%
+    margin-top: 5%;
 }
 
 /* ---------- Pseudo-class Selectors ------------------------------- */
@@ -381,6 +391,15 @@ article {
         margin: 0% 10% 10% 15%;
 
         row-gap: 2%;
+    }
+
+    #rule-box {
+        margin-left: 10%;
+        background-color: #cc9263;
+        border: thick solid #241401;
+        border-radius: 15px;
+        padding: 3%;
+        
     }
 
     .background {

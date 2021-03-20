@@ -246,11 +246,13 @@ function resetDice() {
 // --------------------- Hide RuleBox -----------------------------------
 
 let ruleBox = document.getElementById("rule-box");
+let ruleButton = document.getElementById("rule-button")
 
-function getRules () {
-    if (ruleBox.style.display = "none") {
-        ruleBox.style.display = "block";
-    } 
-    
-    else {ruleBox.style.display = "none"}; 
-};
+ruleButton.addEventListener("click", () => {
+
+    if (ruleBox.className === "hide") {
+        ruleBox.setAttribute("class", "show");
+    } else {
+        
+        ruleBox.setAttribute("class", "hide")} 
+});
