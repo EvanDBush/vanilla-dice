@@ -46,7 +46,6 @@ article {
 
 }
 
-
 /* ID Selectors ----------------------------- */
 
 
@@ -225,11 +224,16 @@ article {
 #rule-box {
     
     min-width: 300px;
-    background-color: #cc9263;
-    border: thick solid #241401;
     border-radius: 15px;
     padding: 3%;
     margin-top: 5%;
+
+    color: #ffe4a3;
+    background: linear-gradient(to bottom, #603e21 30%, #cc9263, #603e21 95%);
+    border: thick solid #ffe4a3;
+    border-radius: 15px;
+    font-weight: bolder;
+    padding: 1%;
 }
 
 /* ---------- Pseudo-class Selectors ------------------------------- */
