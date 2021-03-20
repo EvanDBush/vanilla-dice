@@ -47,6 +47,10 @@ for (let j= 8; j > totalPlayers; j= j-1) {
 
 // ----------------------------- Assigns dice SVGs to Array of Random Numbers ------------------------------------
 
+// const rollButton = document.getElementById('rollbtn');
+// console.log(rollButton);
+
+// rollButton.addEventListener('click', rollDice());
 
 function rollDice () {
 
@@ -75,6 +79,8 @@ console.log(randomArray);
 console.log(rollScore);
 
 };
+
+
 
 // ---------------------------- Trying to set up a way to hold dice from roll dice function, while keeping their position/image. --------------------
 let heldDice = [
@@ -197,7 +203,6 @@ let songLyrics =
     "Falling on the concrete real fast Jumped in my car, slammed on the gas",
     "Bumper to bumper, the avenue's packed I'm trying to get away before the jackers jack",
     "Police on the scene, you know what I mean They passed me up, confronted all the dope fiends",
-    "If there was a problem, yo, I'll solve it Check out the hook while my DJ revolves it",
     "Take heed cause I'm a lyrical poet Miami's on the scene, just in case you didn't know it",
     "My town, that created all the bass sound nough to shake and kick holes in the ground",
     "'Cause my style's like a chemical spill Feasible rhymes that you can vision and feel",
@@ -211,7 +216,6 @@ let songLyrics =
     "too Cold Ice, Ice baby, too cold, too cold"
 ];
 
-console.log(songLyrics.length);
 
 var lineRandom = Math.floor(Math.random() * songLyrics.length);
 

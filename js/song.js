@@ -1,4 +1,8 @@
 // ------------------------------- Song Lyrics Generator ---------------------------
+let ice = "ice";
+let bay = "ba";
+let bee = "by";
+
 
 let chorus = 
 [
@@ -60,3 +64,6 @@ function refreshlyrics () {
 };
 
 refreshlyrics();
+
+
+
