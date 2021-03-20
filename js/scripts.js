@@ -228,8 +228,8 @@ refreshlyrics();
 
 // ------------------------------ creates highlighter reset button --------------------------------------------
 
-document.getElementById("resetbtn").addEventListener("click", resetDice());
-document.getElementById("resetbtn").addEventListener("click", refreshlyrics());
+// document.getElementById("resetbtn").addEventListener("click", resetDice());
+// document.querySelector(".item-g").addEventListener("click", refreshlyrics());
 
 function resetDice() {
     
@@ -241,4 +241,16 @@ function resetDice() {
             document.querySelector(".highlight").setAttribute("class", "dice")
         };
     };
+};
+
+// --------------------- Hide RuleBox -----------------------------------
+
+let ruleBox = document.getElementById("rule-box");
+
+function getRules () {
+    if (ruleBox.style.display = "none") {
+        ruleBox.style.display = "block";
+    } 
+    
+    else {ruleBox.style.display = "none"}; 
 };

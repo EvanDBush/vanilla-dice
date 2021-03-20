@@ -137,6 +137,7 @@ article {
     padding: 2px;
     margin: 15px 15px 15px 15px;
     background-color: #603e21;
+    color: #cc9263;
     border: medium solid #241401;
     border-radius: 15px;
 }
@@ -213,6 +214,14 @@ article {
     text-align: center;
 }
 
+#rule-box {
+    display: none;
+    background-color: #cc9263;
+    border-radius: 15px;
+    padding: 3%;
+    margin-top: 5%
+}
+
 /* ---------- Pseudo-class Selectors ------------------------------- */
 
 
@@ -233,11 +242,7 @@ article {
     border-radius: 15px;
 }
 
-.inert:nth-of-type(3n) {
-    color: #603e21;
-    background-color: #cc9263;
-    
-}
+
 
 .inert:nth-of-type(2n) {
     background-color: #cc9263;
