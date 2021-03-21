@@ -140,8 +140,8 @@ refreshlyrics();
 
 function resetDice() {
     
-    for (let i=0; i < 6; i++) {
-        if (document.getElementById("dice"+ (i+1)).className === "highlight") {
+    for (let dicePosition = 0; dicePosition < 6; dicePosition++) {
+        if (document.getElementById("dice"+ (dicePosition+1)).className === "highlight") {
             document.querySelector(".highlight").setAttribute("class", "dice")
         };
     };
