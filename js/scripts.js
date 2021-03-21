@@ -10,28 +10,26 @@ const totalPlayers = parseInt(prompt('How many players? (1-8)'));
 function addPlayers () {
     
 let totalPlayers = parseInt(prompt('How many players? (1-8)'));
-    for (let i=0; i < totalPlayers; i++) {
-    let playerName = prompt('Enter a name for Player' + (i+1));
-    document.querySelector(`#player${i + 1}`).innerHTML = playerName;
+    for (let playerPosition = 0; playerPosition < totalPlayers; playerPosition++) {
+    let playerName = prompt(`Enter a name for Player${playerPosition + 1}`);
+    document.querySelector(`#player${playerPosition + 1}`).innerHTML = playerName;
     }; 
-    for (let i= 8; i > totalPlayers; i= i-1) {
-    document.querySelector(`#item-${i}`).style.display = "none";
+    for (let playerPosition = 8; playerPosition > totalPlayers; playerPosition= playerPosition-1) {
+    document.querySelector(`#item-${playerPosition}`).style.display = "none";
     };
 };
-
-
 //  Assigns dice SVGs to Array of Random Numbers ------------------------------------
-
 
 function rollDice () {
 
     let randomArray = [];
-    for (let i=0; i < 6; i++) {
+    
+    for (let dicePosition = 0; dicePosition < 6; dicePosition++) {
     var myRoll = Math.floor(Math.random() *6) + 1;
     randomArray.push(myRoll);
-        if (document.getElementById("dice"+ (i+1)).className === "dice") {
+        if (document.getElementById("dice"+ (dicePosition+1)).className === "dice") {
     
-    document.querySelector('.face' + i).setAttribute("src","img/small-dice/face" + randomArray [i] + ".svg");
+    document.querySelector('.face' + dicePosition).setAttribute("src","img/small-dice/face" + randomArray [dicePosition] + ".svg");
         };
     };
 randomArray.sort();
@@ -39,8 +37,8 @@ randomArray.sort();
         rollScore += 100;
     };
 };
+// Highlights dice on click ----------------------
 
-// Highlights dice on click -----------------------------------------
 const diceOne = "dice1";
 const diceTwo = "dice2";
 const diceThree = "dice3";
@@ -56,29 +54,28 @@ function clickHighlight(diceOne) {
 };
 
 // Submits score to player ----------------------
-let i = 1;
+let totalPointsBox = 1;
 
 function submitScore() {
     
-    const playerElement = document.getElementById("item-" + i);
-    const pointsElement = document.getElementById("p" + i + "-points");
+    const playerElement = document.getElementById("item-" + totalPointsBox);
+    const pointsElement = document.getElementById("p" + totalPointsBox+ "-points");
     let enteredScore = parseInt(document.getElementById("score-input").value);
-        if (i < totalPlayers) {
-    let nextPlayer = document.getElementById("item-" + (i+1));
+        if (totalPointsBox < totalPlayers) {
+    let nextPlayer = document.getElementById("item-" + (totalPointsBox + 1));
     pointsElement.innerHTML = enteredScore + parseInt(pointsElement.innerHTML);
     playerElement.setAttribute("class", "inert-player");
     nextPlayer.setAttribute("class", "active-player");
-    i = i + 1;
+    totalPointsBox = totalPointsBox + 1;
         } else {  
         
-        i === totalPlayers;
-        console.log("total should be (8)" + i);
+        // totalPointsBox = totalPlayers;
         pointsElement.innerHTML = enteredScore + parseInt(pointsElement.innerHTML);
         playerElement.setAttribute("class", "inert-player");
         
-        i = 1;
-        let nextPlayer = document.getElementById("item-" + i);
-        nextPlayer.setAttribute("class", "active");
+        totalPointsBox = 1;
+        let nextPlayer = document.getElementById("item-" + totalPointsBox);
+        nextPlayer.setAttribute("class", "active-player");
 };  
     document.getElementById("score-input").value = 0;
 };
@@ -133,16 +130,11 @@ let songLyrics =
 ];
 
 var lineRandom = Math.floor(Math.random() * songLyrics.length);
-
 function refreshlyrics () {
-
     document.getElementById("display-box").innerHTML= (songLyrics[lineRandom] + " . " + chorus).toString().toUpperCase();
 };
-
 refreshlyrics();
-
-// ------------------------------ creates highlighter reset button --------------------------------------------
-
+// Create highlighter reset button --------------------------------------------
 // document.getElementById("resetbtn").addEventListener("click", resetDice());
 // document.querySelector(".item-g").addEventListener("click", refreshlyrics());
 
@@ -154,8 +146,7 @@ function resetDice() {
         };
     };
 };
-
-// --------------------- Hide RuleBox -----------------------------------
+// Hide RuleBox -----------------------------------
 
 let ruleBox = document.getElementById("rule-box");
 let ruleButton = document.getElementById("rule-button")

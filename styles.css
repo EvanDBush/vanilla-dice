@@ -107,7 +107,7 @@ article {
     display: none;
 }
 
-.inert {
+.inert-player {
     width: 90%;
     padding: 2px;
     margin: 15px 15px 15px 15px;
@@ -117,7 +117,7 @@ article {
     border-radius: 15px;
 }
 
-.active {
+.active-player {
     width: 90%;
     padding: 2px;
     margin: 15px 15px 15px 15px;
@@ -133,7 +133,7 @@ article {
     border-radius: 15px;
 }
 
-.btn {
+.button {
     background: #603e21;
     width: 90%;
     height: 50%;
@@ -164,7 +164,7 @@ article {
 
 /*  Id Selectors ---------------------------------- */
 
-#player-box {
+#player-score-container {
     padding: 5%;
     margin: 1%;
     margin-bottom: 10%;
@@ -201,7 +201,7 @@ article {
 /* Pseudo-class Selectors ------------------------------- */
 
 
-.btn:hover {
+.button:hover {
     background: #ffe4a3;
     color: #603e21;
 }
@@ -218,7 +218,7 @@ article {
     border-radius: 15px;
 }
 
-.inert:nth-of-type(2n) {
+.inert-player:nth-of-type(2n) {
     background-color: #cc9263;
     color: #ffe4a3;
 }
@@ -295,57 +295,48 @@ article {
         row-gap: 10%;
         justify-items: center;
         margin: 0%;
-        
     }
     
     .first-grid-position {
         align-self: center;
         grid-column: 1;
-
     }
     
     .second-grid-position {
         align-self: center;
         grid-column: 2;
-
     }
     
     .third-grid-position {
         align-self: center;
         grid-column: 3;
-
     }
     
     .fourth-grid-position {
         align-self: center;
         grid-column: 1;
-
     }
     .fifth-grid-position {
         align-self: center;
         grid-column: 2;
-
     }
     
     .sixth-grid-position {
         align-self: center;
         grid-column: 3;
-
     }
     
     .seventh-grid-position {
         align-items: center;
         grid-column: 1;
-
     }
 
     .eighth-grid-position {
         align-self: center;
         grid-column: 3;
-
     }
 
-    #second-container {
+    #player-score-container {
         padding-top: 5%;
         margin: 0% 10% 10% 15%;
         row-gap: 2%;
@@ -360,14 +351,12 @@ article {
     }
 
     .background {
-        /* z-index: -1; */
         padding-top: 1%;
         margin-top: 2%;
         opacity: 90%;
         color: #cc9263;
         font-weight: bolder;
     }
-
 }
 /* Color Pallet --------------------------------------- */
 
