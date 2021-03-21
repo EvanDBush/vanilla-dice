@@ -1,170 +1,86 @@
 
-// ---------------------------- Array of Random NUmbers --------------------------------------------
+//  Array of Random NUmbers --------------------------------------------
 let randomArray = [];
 var myRoll = Math.floor(Math.random() *6) + 1;
 var rollScore = 0;
-
 const totalPlayers = parseInt(prompt('How many players? (1-8)'));
 
-
-
-
-// ---------------------------- Create player object to keep score? ---------------------------------
-let gamePlayers = {
-    playerName: player1,
-    rollScore: 0,
-    totalScore: 0,
-    heldDice: [],
-    //roll history?
-
-}
-
-// ----------------------------- Adds Player Names to Score grid -----------------------------------------------
+// Adds Player Names to Score grid ---------------------------------------
 
 function addPlayers () {
     
-
-    let totalPlayers = parseInt(prompt('How many players? (1-8)'));
-
-for (let j=0; j < totalPlayers; j++) {
-
-    let playerName = prompt('Enter a name for Player' + (j+1));
-    
-    console.log(playerName, typeof playerName);
-    
-    document.querySelector(`#player${j + 1}`).innerHTML = playerName;
-
-}; 
-
-for (let j= 8; j > totalPlayers; j= j-1) {
-    document.querySelector(`#item-${j}`).style.display = "none";
-};
-    
-
+let totalPlayers = parseInt(prompt('How many players? (1-8)'));
+    for (let i=0; i < totalPlayers; i++) {
+    let playerName = prompt('Enter a name for Player' + (i+1));
+    document.querySelector(`#player${i + 1}`).innerHTML = playerName;
+    }; 
+    for (let i= 8; i > totalPlayers; i= i-1) {
+    document.querySelector(`#item-${i}`).style.display = "none";
+    };
 };
 
 
+//  Assigns dice SVGs to Array of Random Numbers ------------------------------------
 
-// ----------------------------- Assigns dice SVGs to Array of Random Numbers ------------------------------------
-
-// const rollButton = document.getElementById('rollbtn');
-// console.log(rollButton);
-
-// rollButton.addEventListener('click', rollDice());
 
 function rollDice () {
 
     let randomArray = [];
-
-for (let i=0; i < 6; i++) {
-    
+    for (let i=0; i < 6; i++) {
     var myRoll = Math.floor(Math.random() *6) + 1;
-    
     randomArray.push(myRoll);
-    
         if (document.getElementById("dice"+ (i+1)).className === "dice") {
     
     document.querySelector('.face' + i).setAttribute("src","img/small-dice/face" + randomArray [i] + ".svg");
-    }
-};
-    randomArray.sort();
-
-    
+        };
+    };
+randomArray.sort();
     if (randomArray[0] === 1) {
         rollScore += 100;
+    };
 };
 
+// Highlights dice on click -----------------------------------------
+const diceOne = "dice1";
+const diceTwo = "dice2";
+const diceThree = "dice3";
+const diceFour = "dice4";
+const diceFive = "dice5";
+const diceSix = "dice6";
 
-console.log(randomArray);
-console.log(rollScore);
-
+function clickHighlight(diceOne) {
+    if (document.getElementById(diceOne).className === "dice") {
+        document.getElementById(diceOne).setAttribute("class","highlight"); 
+    } else {document.getElementById(diceOne).setAttribute("class", "dice");
+    };
 };
 
-
-
-// ---------------------------- Trying to set up a way to hold dice from roll dice function, while keeping their position/image. --------------------
-let heldDice = [
-    [randomArray[0], true],
-    [randomArray[1], true],
-    [randomArray[2], true],
-    [randomArray[3], true],
-    [randomArray[4], true],
-    [randomArray[5], true],
-];
-
-
-// ------------------------------ Highlights dice on click -----------------------------------------
-const dice1 = "dice1";
-const dice2 = "dice2";
-const dice3 = "dice3";
-const dice4 = "dice4";
-const dice5 = "dice5";
-const dice6 = "dice6";
-
-
-function clickHighlight(dice1) {
-
-    if (document.getElementById(dice1).className === "dice") {
-        document.getElementById(dice1).setAttribute("class","highlight"); 
-    
-    } else {document.getElementById(dice1).setAttribute("class", "dice");
-};
-};
-
-
-
-// ------------------------------- Submits score to player ----------------------
-
-
-
-
-
-let j = 1;
-
-console.log("this is the starting J  (1)" + j)
+// Submits score to player ----------------------
+let i = 1;
 
 function submitScore() {
     
-
-    const playerElement = document.getElementById("item-" + j);
-    const pointsElement = document.getElementById("p" + j + "-points");
-    
+    const playerElement = document.getElementById("item-" + i);
+    const pointsElement = document.getElementById("p" + i + "-points");
     let enteredScore = parseInt(document.getElementById("score-input").value);
-    
-    if (j < totalPlayers) {
-
-    let nextPlayer = document.getElementById("item-" + (j+1));
-    
+        if (i < totalPlayers) {
+    let nextPlayer = document.getElementById("item-" + (i+1));
     pointsElement.innerHTML = enteredScore + parseInt(pointsElement.innerHTML);
-    playerElement.setAttribute("class", "inert");
-    nextPlayer.setAttribute("class", "active");
-    j = j + 1;
-    
-    console.log("nextPlayer is +1 J=" + j);
-    console.log(nextPlayer);
-    }
-
-    else {  
+    playerElement.setAttribute("class", "inert-player");
+    nextPlayer.setAttribute("class", "active-player");
+    i = i + 1;
+        } else {  
         
-        j === totalPlayers;
-        console.log("total should be (8)" + j);
-        
-        
+        i === totalPlayers;
+        console.log("total should be (8)" + i);
         pointsElement.innerHTML = enteredScore + parseInt(pointsElement.innerHTML);
-        playerElement.setAttribute("class", "inert");
+        playerElement.setAttribute("class", "inert-player");
         
-        j = 1;
-        
-        let nextPlayer = document.getElementById("item-" + j);
+        i = 1;
+        let nextPlayer = document.getElementById("item-" + i);
         nextPlayer.setAttribute("class", "active");
-        ;
-        console.log("should be (1) after j reached" + j);
-        console.log("after total player equal to J" + nextPlayer);
-        
-};
-   
+};  
     document.getElementById("score-input").value = 0;
-
 };
 
 let chorus = 
@@ -216,7 +132,6 @@ let songLyrics =
     "too Cold Ice, Ice baby, too cold, too cold"
 ];
 
-
 var lineRandom = Math.floor(Math.random() * songLyrics.length);
 
 function refreshlyrics () {
@@ -233,11 +148,8 @@ refreshlyrics();
 
 function resetDice() {
     
-
     for (let i=0; i < 6; i++) {
-    
         if (document.getElementById("dice"+ (i+1)).className === "highlight") {
-        
             document.querySelector(".highlight").setAttribute("class", "dice")
         };
     };
@@ -249,10 +161,8 @@ let ruleBox = document.getElementById("rule-box");
 let ruleButton = document.getElementById("rule-button")
 
 ruleButton.addEventListener("click", () => {
-
     if (ruleBox.className === "hide") {
         ruleBox.setAttribute("class", "show");
     } else {
-        
         ruleBox.setAttribute("class", "hide")} 
 });
