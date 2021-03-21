@@ -3,14 +3,12 @@
 
 html {
     background: linear-gradient(to bottom, #603e21 20%, #ffbc85, #603e21 95%);
-    /* opacity: 95%; */
 } 
 
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #ffe4a3;
-    
     box-sizing: border-box;
 }
 
@@ -24,106 +22,77 @@ h1 {
 h3 {
     display:inline;
     width: 50%;
-    
     text-align: center;
     padding: 2px 5px 2px 5px;;
     border-radius: 15px;
 }
 
-h5 {
+span {
     display: inline-block;
-    position: relative;
-    bottom: 10px;
-    
+    font-size: .4em;
     border: solid thin #f8d6ba;
-    padding: 5px;
+    padding: 2px;
     border-radius: 5px;
-    
 }
 
 article {
     padding: 2%;
-
 }
 
 /* ID Selectors ----------------------------- */
 
-
-
-
 /* Class Selectors --------------------------- */
 
-.container {
-    
+.grid-box {
     display: grid;
-    grid-template-columns: auto 155px 155px auto;
-    grid-template-rows: 155px 155px 155px 155px;
+    grid-template-columns: 155px 155px;
+    
     column-gap: 5%;
     row-gap: 3%;
     justify-items: center;
-    
-    
 }
 
-.item-a {
+.first-grid-position {
     align-self: center;
     align-items: center;
-    grid-column: 2;
-    grid-row: 1;
+    grid-column: 1;
 }
 
-.item-b {
-    align-self: center;
-    grid-column: 3;
-    grid-row: 1;
-}
-
-.item-c {
+.second-grid-position {
     align-self: center;
     grid-column: 2;
-    grid-row: 2;
 }
 
-.item-d {
+.third-grid-position {
     align-self: center;
-    grid-column: 3;
-    grid-row: 2;
+    grid-column: 1;
 }
-.item-e {
+
+.fourth-grid-position {
     align-self: center;
     grid-column: 2;
-    grid-row: 3;
 }
-
-.item-f {
+.fifth-grid-position {
     align-self: center;
-    grid-column: 3;
-    grid-row: 3;
+    grid-column: 1;
 }
 
-.item-g {
+.sixth-grid-position {
+    align-self: center;
+    grid-column: 2;
+}
+
+.seventh-grid-position {
+    align-self: start;
+    grid-column: 1;
+}
+
+.eighth-grid-position {
     align-self: start;
     grid-column: 2;
-    grid-row: 4;
-}
-
-.item-h {
-    /* background: #603e21;
-    border: medium solid #ffbc85;
-    border-radius: 15px;
-    color:  #ffbc85;
-    padding: 2%;
-    margin: 2%;
-    width: 100%;
-    height: 60%; */
-    
-    align-self: start;
-    grid-column: 3;
-    grid-row: 4;
 }
 
 .dice {
-    
     width: fit-content;
     margin: 15px 15px 15px 15px;
     border: thick solid #241401;
@@ -139,7 +108,6 @@ article {
 }
 
 .inert {
-    
     width: 90%;
     padding: 2px;
     margin: 15px 15px 15px 15px;
@@ -150,7 +118,6 @@ article {
 }
 
 .active {
-
     width: 90%;
     padding: 2px;
     margin: 15px 15px 15px 15px;
@@ -160,7 +127,6 @@ article {
 }
 
 .highlight {
-
     width: fit-content;
     margin: 15px 15px 15px 15px;
     border: thick solid #ffe4a3;
@@ -184,21 +150,19 @@ article {
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    /* line-height: 150%; */
     font-size: 30px;
     color: #ffbc85;
     background: #603e21;
 }
 
 .background {
-    /* z-index: -1; */
     padding-top: 5%;
     opacity: 90%;
     color: #cc9263;
     font-weight: bolder;
 }
 
-/* --------- Id Selectors ---------------------------------- */
+/*  Id Selectors ---------------------------------- */
 
 #second-container {
     padding: 5%;
@@ -222,12 +186,10 @@ article {
 }
 
 #rule-box {
-    
     min-width: 300px;
     border-radius: 15px;
     padding: 3%;
     margin-top: 5%;
-
     color: #ffe4a3;
     background: linear-gradient(to bottom, #603e21 30%, #cc9263, #603e21 95%);
     border: thick solid #ffe4a3;
@@ -236,7 +198,7 @@ article {
     padding: 1%;
 }
 
-/* ---------- Pseudo-class Selectors ------------------------------- */
+/* Pseudo-class Selectors ------------------------------- */
 
 
 .btn:hover {
@@ -256,8 +218,6 @@ article {
     border-radius: 15px;
 }
 
-
-
 .inert:nth-of-type(2n) {
     background-color: #cc9263;
     color: #ffe4a3;
@@ -266,7 +226,6 @@ article {
 /* Media Queries -------------------------------------- */
 
 @media (max-width: 310px) {
-    
     h1 {
         display: none;
     }
@@ -281,8 +240,6 @@ article {
         margin-right: 0;
     }
 }
-
-
 
 @media (min-width: 525px) {
 
@@ -309,12 +266,14 @@ article {
         flex-basis: auto ;
         min-width: 150px;
     }
+
+    div .hide {
+        display: block;
+    }
     
     .to-top {
         display: none;
     }
-
-    
 }
 
 @media (min-width: 1000px) {
@@ -328,14 +287,14 @@ article {
         min-width: 400px;
     }
 
-    .container {
+    .grid-box {
         /* display:flex;
         flex-wrap: wrap;
         flex-direction: row; */
         
         display: grid;
-        grid-template-columns: auto 155px 155px 155px auto;
-        grid-template-rows: auto 155px 155px 155px auto;
+        grid-template-columns:  155px 155px 155px;
+        grid-template-rows:  155px 155px 155px;
         column-gap: 7%;
         row-gap: 10%;
         justify-items: center;
@@ -343,57 +302,56 @@ article {
         
     }
     
-    .item-a {
+    .first-grid-position {
+        align-self: center;
+        grid-column: 1;
+
+    }
+    
+    .second-grid-position {
         align-self: center;
         grid-column: 2;
-        grid-row: 2;
+
     }
     
-    .item-b {
+    .third-grid-position {
         align-self: center;
         grid-column: 3;
-        grid-row: 2;
+
     }
     
-    .item-c {
+    .fourth-grid-position {
         align-self: center;
-        grid-column: 4;
-        grid-row: 2;
+        grid-column: 1;
+
     }
-    
-    .item-d {
+    .fifth-grid-position {
         align-self: center;
         grid-column: 2;
-        grid-row: 3;
+
     }
-    .item-e {
+    
+    .sixth-grid-position {
         align-self: center;
         grid-column: 3;
-        grid-row: 3;
+
     }
     
-    .item-f {
-        align-self: center;
-        grid-column: 4;
-        grid-row: 3;
-    }
-    
-    .item-g {
+    .seventh-grid-position {
         align-items: center;
-        grid-column: 2;
-        grid-row: 4;
+        grid-column: 1;
+
     }
 
-    .item-h {
+    .eighth-grid-position {
         align-self: center;
-        grid-column: 4;
-        grid-row: 4;
+        grid-column: 3;
+
     }
 
     #second-container {
         padding-top: 5%;
         margin: 0% 10% 10% 15%;
-
         row-gap: 2%;
     }
 
@@ -403,7 +361,6 @@ article {
         border: thick solid #241401;
         border-radius: 15px;
         padding: 3%;
-        
     }
 
     .background {

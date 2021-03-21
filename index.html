@@ -1,185 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanilla Dice</title>
-    <link href="styles.css" rel="stylesheet"> 
-    <script defer src="js/scripts.js"></script>
-    <!-- <script defer src="js/song.js"></script> -->
-</head>
-<body>
-    <header>    
-        <h1 id="top">Vanilla Dice
-            <h5 id="resetbtn" onclick="resetDice()">Dice Reset</h5>
-        </h1>
-    </header>   
-
-    <main>
-        <article> 
-        <div class="container">
-
-            <div class="item-a">
-                <div id="dice1" onclick="clickHighlight(dice1)" class="dice">           
-                    <image class="face0" src="img/small-dice/face1.svg">
-                </div>
-            </div>
-
-            <div class="item-b">
-                <div id="dice2"  onclick="clickHighlight(dice2)" class="dice">           
-                    <image class="face1" src="img/small-dice/face2.svg">
-                </div>
-            </div>
-
-            <div class="item-c">    
-                <div id="dice3"  onclick="clickHighlight(dice3)" class="dice">           
-                    <image class="face2" src="img/small-dice/face3.svg">
-                </div>
-            </div>
-
-            <div class="item-d"> 
-                <div id="dice4"  onclick="clickHighlight(dice4)" class="dice">           
-                    <image class="face3" src="img/small-dice/face4.svg">
-                </div>
-            </div>
-
-            <div class="item-e">
-                <div id="dice5"  onclick="clickHighlight(dice5)" class="dice">           
-                    <image class="face4" src="img/small-dice/face5.svg">
-                </div>
-            </div>
-            
-            <div class="item-f">
-                <div id="dice6"  onclick="clickHighlight(dice6)" class="dice">           
-                    <image class="face5" src="img/small-dice/face6.svg">
-                </div>
-            </div>
-
-            <div class="item-g">
-                <button 
-                    type="button"
-                    id="rollbtn" 
-                    class="btn"
-                    onclick="rollDice()">
-                Roll Dice</button>
-
-                <button 
-                type="button"
-                id="rule-button" 
-                class="btn">
-            Score Rules</button>
-    
-
-                <!-- <button 
-                    type="button" 
-                    class="btn"
-                    onClick="invertToggle()">
-                Invert Color</button> -->
-
-                
-            </div>
-            
-            <div class="item-h">
-                    <h3>Enter Score: </h3>
-                    <div id="roll-score">
-                        
-                        <input type="text"  id="score-input" placeholder="Enter Score" value="0" name="scorebox">
-                        
-                        <button type="button" class="btn" id="score-submit" onclick="submitScore()">Bank Score </button> 
-                        
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vanilla Dice</title>
+        <link href="styles.css" rel="stylesheet"> 
+        <script defer src="js/scripts.js"></script>
+    </head>
+    <body>
+        <header>    
+            <h1 id="top">Vanilla Dice
+                <span id="reset-button" onclick="resetDice()">Dice Reset</span>
+            </h1>
+        </header>   
+            <main>
+                <article> 
+                    <div class="grid-box">
+                    <div class="first-grid-position">
+                        <div id="dice1" class="dice" onclick="clickHighlight(dice1)">           
+                            <image class="face0" src="img/small-dice/face1.svg">
+                        </div>
                     </div>
-            
-            </div>
-        </div>
-        </article>
-
-        <section id="rule-box" class="hide">
-            <h3><u>Rules</u></h3>
-            <ul>
-                <li>Begin by rolling six dice.</li>
-                <li>To start, first bank at least 1000 points.</li>
-                <li>After, player can end turn and bank points at any time.</li> 
-                <li>Each turn, the player must keep at least one scoring dice.</li>
-                <li>Turn ends when points are banked or no dice score.</li>
-                <li>If all six dice score, roll all dice again.</li>
-                <li>Dice multiples do not carry over to new six dice roll.</li>
-            </ul>
-            <h3><u>Scoring</u></h3>
-            <ul>
-                <li>One = 100</li>
-                <li>Five = 50</li>
-                <li>Triple Ones = 1000</li>
-                <li>Additional Ones After 3 =  + 1000</li>
-            </ul>
-    
-            <ul>
-                <li>Other Triples = # X 100</li>
-                <li>Same # after = + (# X 100)</li>
-                <li>Three pairs = 1000</li>
-                <li>Straight = 1500</li>
-            </ul>
-    
-            
-        </section>
-
-        <article>
-            <div id="second-container">
-            
-                <div class="inert">
-                    <button 
-                    type="button"
-                    class="smallbtn" 
-                    onClick="addPlayers()"> + 
-                    </button>    
-                    <h3 id="title">Players</h3>      
-                </div>
+                    <div class="second-grid-position">
+                        <div id="dice2"  class="dice"  onclick="clickHighlight(dice2)" >           
+                            <image class="face1" src="img/small-dice/face2.svg">
+                        </div>
+                    </div>
+                    <div class="third-grid-position">    
+                        <div id="dice3"  class="dice" onclick="clickHighlight(dice3)" >           
+                            <image class="face2" src="img/small-dice/face3.svg">
+                        </div>
+                    </div>
+                    <div class="fourth-grid-position"> 
+                        <div id="dice4" class="dice"  onclick="clickHighlight(dice4)" >           
+                            <image class="face3" src="img/small-dice/face4.svg">
+                        </div>
+                    </div>
+                    <div class="fifth-grid-position">
+                        <div id="dice5"  class="dice" onclick="clickHighlight(dice5)">           
+                            <image class="face4" src="img/small-dice/face5.svg">
+                        </div>
+                    </div>
+                    
+                    <div class="sixth-grid-position">
+                        <div id="dice6"  class="dice" onclick="clickHighlight(dice6)">           
+                            <image class="face5" src="img/small-dice/face6.svg">
+                        </div>
+                    </div>
+                    <div class="seventh-grid-position">
+                        <button 
+                            type="button"
+                            id="rollbtn" 
+                            class="btn"
+                            onclick="rollDice()">
+                            Roll Dice</button>
+                        <button 
+                            type="button"
+                            id="rule-button" 
+                            class="btn">
+                            Score Rules</button>
+                    </div>
+                    <div class="hide"></div>
+                    <div class="eighth-grid-position">
+                            <h3>Enter Score: </h3>
+                            <div id="roll-score">
+                                
+                                <input type="text"  id="score-input" placeholder="Enter Score" value="0" name="scorebox">
+                                
+                                <button type="button" class="btn" id="score-submit" onclick="submitScore()">Bank Score </button> 
+                                
+                            </div>
                 
-                <div class="active" id="item-1">
-                    <h3 id="player1">Player1</h3>
-                    <h3 id="p1-points">0</h3>
                 </div>
-    
-                <div class="inert" id="item-2">
-                    <h3 id="player2">Player2</h3>
-                    <h3 id="p2-points">0</h3>   
-                </div>
-    
-                <div class="inert" id="item-3">
-                    <h3 id="player3">Player3</h3>
-                    <h3 id="p3-points">0</h3>
-                </div>
-    
-                <div class="inert" id="item-4">
-                    <h3 id="player4">Player4</h3>
-                    <h3 id="p4-points">0</h3>
-                </div>
-    
-                <div class="inert" id="item-5">
-                    <h3 id="player5">Player5</h3>
-                    <h3 id="p5-points">0</h3>
-                </div>
-    
-                <div class="inert" id="item-6">
-                    <h3 id="player6">Player6</h3>
-                    <h3 id="p6-points">0</h3>
-                </div>
-    
-                <div class="inert" id="item-7">
-                    <h3 id="player7">Player7</h3>
-                    <h3 id="p7-points">0</h3>
-                </div>
-    
-                <div class="inert" id="item-8">
-                    <h3 id="player8">Player8</h3>
-                    <h3 id="p8-points">0</h3>
-                </div>
-            </div> 
-        </article>
-    </main>
-    
-    <section class="background">
-        <p  id="display-box"></p>
-    </section>
-    <h3 class="to-top"><a href="#top">Back to top</a></h3>
-</body>
+            </div>
+            </article>
+            <section id="rule-box" class="hide">
+                <h3><u>Rules</u></h3>
+                <ul>
+                    <li>Begin by rolling six dice.</li>
+                    <li>To start, first bank at least 1000 points.</li>
+                    <li>After, player can end turn and bank points at any time.</li> 
+                    <li>Each turn, the player must keep at least one scoring dice.</li>
+                    <li>Turn ends when points are banked or no dice score.</li>
+                    <li>If all six dice score, roll all dice again.</li>
+                    <li>Dice multiples do not carry over to new six dice roll.</li>
+                </ul>
+                <h3><u>Scoring</u></h3>
+                <ul>
+                    <li>One = 100</li>
+                    <li>Five = 50</li>
+                    <li>Triple Ones = 1000</li>
+                    <li>Additional Ones After 3 =  + 1000</li>
+                </ul>
+                <ul>
+                    <li>Other Triples = # X 100</li>
+                    <li>Same # after = + (# X 100)</li>
+                    <li>Three pairs = 1000</li>
+                    <li>Straight = 1500</li>
+                </ul>
+        
+                
+            </section>
+            <article>
+                <div id="second-container">
+                
+                    <div class="inert">
+                        <button 
+                        type="button"
+                        class="smallbtn" 
+                        onClick="addPlayers()"> + 
+                        </button>    
+                        <h3 id="title">Players</h3>      
+                    </div>
+                    
+                    <div class="active" id="item-1">
+                        <h3 id="player1">Player1</h3>
+                        <h3 id="p1-points">0</h3>
+                    </div>
+                    <div class="inert" id="item-2">
+                        <h3 id="player2">Player2</h3>
+                        <h3 id="p2-points">0</h3>   
+                    </div>
+                    <div class="inert" id="item-3">
+                        <h3 id="player3">Player3</h3>
+                        <h3 id="p3-points">0</h3>
+                    </div>
+                    <div class="inert" id="item-4">
+                        <h3 id="player4">Player4</h3>
+                        <h3 id="p4-points">0</h3>
+                    </div>
+                    <div class="inert" id="item-5">
+                        <h3 id="player5">Player5</h3>
+                        <h3 id="p5-points">0</h3>
+                    </div>
+                    <div class="inert" id="item-6">
+                        <h3 id="player6">Player6</h3>
+                        <h3 id="p6-points">0</h3>
+                    </div>
+                    <div class="inert" id="item-7">
+                        <h3 id="player7">Player7</h3>
+                        <h3 id="p7-points">0</h3>
+                    </div>
+                    <div class="inert" id="item-8">
+                        <h3 id="player8">Player8</h3>
+                        <h3 id="p8-points">0</h3>
+                    </div>
+                </div> 
+            </article>
+        </main>
+        <section class="background">
+            <p  id="display-box"></p>
+        </section>
+        <h3 class="to-top"><a href="#top">Back to top</a></h3>
+    </body>
 </html>
