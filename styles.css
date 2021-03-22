@@ -46,9 +46,8 @@ article {
 .grid-box {
     display: grid;
     grid-template-columns: 155px 155px;
-    
-    column-gap: 5%;
-    row-gap: 3%;
+    column-gap: 3%;
+    row-gap: 1%;
     justify-items: center;
 }
 
@@ -94,7 +93,7 @@ article {
 
 .dice {
     width: fit-content;
-    margin: 15px 15px 15px 15px;
+    margin: 5px 15px 5px 15px;
     border: thick solid #241401;
     border-radius: 15px;
 }
@@ -128,7 +127,7 @@ article {
 
 .highlight {
     width: fit-content;
-    margin: 15px 15px 15px 15px;
+    margin: 5px 15px 5px 15px;
     border: thick solid #ffe4a3;
     border-radius: 15px;
 }
@@ -230,12 +229,12 @@ article {
         display: none;
     }
 
-    .container {
+    .grid-box {
         display: block;
         margin: 5px;
     }
     
-    .btn {
+    .button {
         margin-left: 0;
         margin-right: 0;
     }
@@ -243,6 +242,10 @@ article {
 
 @media (min-width: 525px) {
 
+    body {
+        margin: 5%;
+    }
+    
     h1 {
         font-size: 2em;
     }
@@ -266,10 +269,6 @@ article {
         flex-basis: auto ;
         min-width: 150px;
     }
-
-    div .hide {
-        display: block;
-    }
     
     .to-top {
         display: none;
@@ -277,6 +276,9 @@ article {
 }
 
 @media (min-width: 1000px) {
+    body {
+        margin: 10%;
+    }
 
     h1 {
         font-size: 3em;
@@ -284,15 +286,18 @@ article {
 
     article {
         flex-basis: auto ;
-        min-width: 400px;
+        min-width: 300px;
+    }
+
+    div .hide {
+        display: block;
     }
 
     .grid-box {
         display: grid;
         grid-template-columns:  155px 155px 155px;
-        grid-template-rows:  155px 155px 155px;
         column-gap: 7%;
-        row-gap: 10%;
+        row-gap: 2%;
         justify-items: center;
         margin: 0%;
     }
@@ -343,17 +348,17 @@ article {
     }
 
     #rule-box {
-        margin-left: 10%;
+        margin: 5%;
         background-color: #cc9263;
         border: thick solid #241401;
         border-radius: 15px;
-        padding: 3%;
+        padding: 2%;
     }
 
     .background {
         padding-top: 1%;
         margin-top: 2%;
-        opacity: 90%;
+        opacity: 85%;
         color: #cc9263;
         font-weight: bolder;
     }

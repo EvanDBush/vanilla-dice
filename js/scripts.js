@@ -8,15 +8,14 @@ const totalPlayers = parseInt(prompt('How many players? (1-8)'));
 // Adds Player Names to Score grid ---------------------------------------
 
 function addPlayers () {
-    
-let totalPlayers = parseInt(prompt('How many players? (1-8)'));
-    for (let playerPosition = 0; playerPosition < totalPlayers; playerPosition++) {
-    let playerName = prompt(`Enter a name for Player${playerPosition + 1}`);
-    document.querySelector(`#player${playerPosition + 1}`).innerHTML = playerName;
-    }; 
-    for (let playerPosition = 8; playerPosition > totalPlayers; playerPosition= playerPosition-1) {
-    document.querySelector(`#item-${playerPosition}`).style.display = "none";
-    };
+    let totalPlayers = parseInt(prompt('How many players? (1-8)'));
+        for (let namePosition = 0; namePosition < totalPlayers; namePosition++) {
+            let playerName = prompt(`Enter a name for Player${namePosition + 1}`);
+            document.querySelector(`#player${namePosition + 1}`).innerHTML = playerName;
+        }; 
+        for (let namePosition = 8; namePosition > totalPlayers; namePosition= namePosition-1) {
+            document.querySelector(`#player-name-${namePosition}`).style.display = 'none';
+        };
 };
 //  Assigns dice SVGs to Array of Random Numbers ------------------------------------
 
@@ -24,17 +23,13 @@ function rollDice () {
 
     let randomArray = [];
     
-    for (let dicePosition = 0; dicePosition < 6; dicePosition++) {
-    var myRoll = Math.floor(Math.random() *6) + 1;
-    randomArray.push(myRoll);
-        if (document.getElementById("dice"+ (dicePosition+1)).className === "dice") {
-    
-    document.querySelector('.face' + dicePosition).setAttribute("src","img/small-dice/face" + randomArray [dicePosition] + ".svg");
+        for (let dicePosition = 0; dicePosition < 6; dicePosition++) {
+            let myRoll = Math.floor(Math.random() *6) + 1;
+            randomArray.push(myRoll);
+            let diceSVG = `img/small-dice/face${randomArray[dicePosition]}.svg`;
+                if (document.getElementById(`dice${dicePosition + 1}`).className === 'dice') {
+                    document.querySelector(`.face${dicePosition}`).setAttribute('src', diceSVG);
         };
-    };
-randomArray.sort();
-    if (randomArray[0] === 1) {
-        rollScore += 100;
     };
 };
 // Highlights dice on click ----------------------
@@ -58,35 +53,34 @@ let totalPointsBox = 1;
 
 function submitScore() {
     
-    const playerElement = document.getElementById("item-" + totalPointsBox);
-    const pointsElement = document.getElementById("p" + totalPointsBox+ "-points");
+    const playerElement = document.getElementById("player-name-" +totalPointsBox);
+    console.log(playerElement);
+    const pointsElement = document.getElementById("p" +totalPointsBox+ "-points");
     let enteredScore = parseInt(document.getElementById("score-input").value);
         if (totalPointsBox < totalPlayers) {
-    let nextPlayer = document.getElementById("item-" + (totalPointsBox + 1));
-    pointsElement.innerHTML = enteredScore + parseInt(pointsElement.innerHTML);
-    playerElement.setAttribute("class", "inert-player");
-    nextPlayer.setAttribute("class", "active-player");
-    totalPointsBox = totalPointsBox + 1;
+            let nextPlayer = document.getElementById("player-name-" + (totalPointsBox + 1));
+            pointsElement.innerHTML = enteredScore + parseInt(pointsElement.innerHTML);
+            playerElement.setAttribute("class", "inert-player");
+            nextPlayer.setAttribute("class", "active-player");
+            totalPointsBox = totalPointsBox + 1;
         } else {  
-        
-        // totalPointsBox = totalPlayers;
-        pointsElement.innerHTML = enteredScore + parseInt(pointsElement.innerHTML);
-        playerElement.setAttribute("class", "inert-player");
-        
-        totalPointsBox = 1;
-        let nextPlayer = document.getElementById("item-" + totalPointsBox);
-        nextPlayer.setAttribute("class", "active-player");
+            totalPointsBox = totalPlayers;
+            pointsElement.innerHTML = enteredScore + parseInt(pointsElement.innerHTML);
+            playerElement.setAttribute("class", "inert-player");
+            totalPointsBox = 1;
+            let nextPlayer = document.getElementById("player-name-" + totalPointsBox);
+            nextPlayer.setAttribute("class", "active-player");
 };  
     document.getElementById("score-input").value = 0;
 };
 
 let chorus = 
 [
-"Ice, Ice Baby",
-"Vanilla Ice, Ice Baby",
-"Vanilla Ice, Ice Baby",
-"Vanilla Ice, Ice Baby",
-"Vanilla"
+    "Ice, Ice Baby",
+    "Vanilla Ice, Ice Baby",
+    "Vanilla Ice, Ice Baby",
+    "Vanilla Ice, Ice Baby",
+    "Vanilla"
 ]
 
 let songLyrics = 
@@ -135,11 +129,8 @@ function refreshlyrics () {
 };
 refreshlyrics();
 // Create highlighter reset button --------------------------------------------
-// document.getElementById("resetbtn").addEventListener("click", resetDice());
-// document.querySelector(".item-g").addEventListener("click", refreshlyrics());
 
 function resetDice() {
-    
     for (let dicePosition = 0; dicePosition < 6; dicePosition++) {
         if (document.getElementById("dice"+ (dicePosition+1)).className === "highlight") {
             document.querySelector(".highlight").setAttribute("class", "dice")
@@ -149,7 +140,7 @@ function resetDice() {
 // Hide RuleBox -----------------------------------
 
 let ruleBox = document.getElementById("rule-box");
-let ruleButton = document.getElementById("rule-button")
+let ruleButton = document.getElementById("rule-button");
 
 ruleButton.addEventListener("click", () => {
     if (ruleBox.className === "hide") {
