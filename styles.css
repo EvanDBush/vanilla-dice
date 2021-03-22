@@ -6,6 +6,7 @@ html {
 } 
 
 
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #ffe4a3;
@@ -17,6 +18,14 @@ h1 {
     text-align: center;
     font-size: 2em;
     text-shadow: 5px -5px 5px #241401;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2%;
 }
 
 h3 {
@@ -37,6 +46,10 @@ span {
 
 article {
     padding: 2%;
+}
+
+a {
+    color: #cc9263;
 }
 
 /* ID Selectors ----------------------------- */
@@ -146,6 +159,11 @@ article {
     font-weight: bolder;
 }
 
+a {
+    color: #cc9263;
+}
+
+
 /*  Id Selectors ---------------------------------- */
 
 #player-score-container {
@@ -174,7 +192,6 @@ article {
     min-width: 300px;
     border-radius: 15px;
     padding: 3%;
-    margin-top: 5%;
     color: #ffe4a3;
     background: linear-gradient(to bottom, #603e21 30%, #cc9263, #603e21 95%);
     border: thick solid #ffe4a3;
@@ -185,6 +202,13 @@ article {
 
 /* Pseudo-class Selectors ------------------------------- */
 
+a:link {
+    color: #ffbc85 ;
+}
+
+a:hover {
+    color: #ffe4a3;
+}
 
 .button:hover {
     background: #ffe4a3;
@@ -244,40 +268,38 @@ article {
         text-align: center
     }
 
-    main {
-        display: flex;
-        flex-direction: row-reverse;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 2%;
-    }
-
     article {
         flex-basis: auto ;
         min-width: 150px;
     }
     
-    .to-top {
-        display: none;
-    }
 
     #rule-box {
         margin: 5%;
         background-color: #cc9263;
         border: thick solid #241401;
         border-radius: 15px;
+        font-size: .8em;
         padding: 2%;
         order: 1;
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
     body {
-        margin: 10%;
+        margin: 5%;
     }
 
     h1 {
         font-size: 3em;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 2%;
     }
 
     article {
@@ -294,6 +316,7 @@ article {
         grid-template-columns:  155px 155px 155px;
         column-gap: 7%;
         row-gap: 2%;
+        justify-self: left;
         justify-items: center;
         margin: 0%;
     }
@@ -324,12 +347,10 @@ article {
     }
 
     #player-score-container {
-        padding-top: 5%;
-        margin: 0% 10% 10% 15%;
         row-gap: 2%;
     }
     #rule-box {
-        margin: 5%;
+        display: flex;
         background-color: #cc9263;
         border: thick solid #241401;
         border-radius: 15px;
