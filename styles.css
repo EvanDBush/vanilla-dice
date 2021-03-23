@@ -28,6 +28,10 @@ main {
     padding: 2%;
 }
 
+img {
+    width: 100px;
+}
+
 h3 {
     display:inline;
     width: 50%;
@@ -285,7 +289,7 @@ a:hover {
     }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1000px) {
     body {
         margin: 5%;
     }
@@ -300,6 +304,7 @@ a:hover {
         flex-wrap: wrap;
         justify-content: space-around;
         padding: 2%;
+        margin: 5%;
     }
 
     article {
@@ -348,9 +353,11 @@ a:hover {
 
     #player-score-container {
         row-gap: 2%;
+        font-size: .6em;
     }
     #rule-box {
         display: flex;
+        font-size: .6em;
         background-color: #cc9263;
         border: thick solid #241401;
         border-radius: 15px;
