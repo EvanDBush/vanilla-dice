@@ -70,7 +70,7 @@ function submitScore() {
             totalPointsBox = 1;
             let nextPlayer = document.getElementById("player-name-" + totalPointsBox);
             nextPlayer.setAttribute("class", "active-player");
-};  
+        };  
     document.getElementById("score-input").value = 0;
 };
 
