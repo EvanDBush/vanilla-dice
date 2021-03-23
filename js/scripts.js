@@ -17,7 +17,7 @@ function addPlayers () {
             document.querySelector(`#player-name-${namePosition}`).style.display = 'none';
         };
 };
-//  Assigns dice SVGs to Array of Random Numbers ------------------------------------
+//  Assigns dice SVGs to Array of Random Numbers ----------------------------
 
 function rollDice () {
 

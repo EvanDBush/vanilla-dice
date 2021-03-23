@@ -48,10 +48,6 @@ span {
     border-radius: 5px;
 }
 
-article {
-    padding: 2%;
-}
-
 a {
     color: #cc9263;
 }
@@ -63,7 +59,7 @@ a {
 .grid-box {
     display: grid;
     grid-template-columns: 155px 155px;
-    column-gap: 3%;
+    column-gap: 2%;
     row-gap: 1%;
     justify-items: center;
 }
@@ -137,7 +133,7 @@ a {
 .button {
     background: #603e21;
     width: 90%;
-    height: 50%;
+    
     color: #ffbc85;
     font-size: 20px;
     font-weight: bold;	
@@ -295,7 +291,11 @@ a:hover {
     }
 
     h1 {
-        font-size: 3em;
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size :.8em;
     }
 
     main {
@@ -316,11 +316,24 @@ a:hover {
         display: block;
     }
 
+    .button {
+        font-size: 1em;
+        width: 80%;
+    }
+
+    .small-button {
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        font-size: 15px;
+        
+    }
+
     .grid-box {
         display: grid;
         grid-template-columns:  155px 155px 155px;
-        column-gap: 7%;
-        row-gap: 2%;
+        column-gap: 3%;
+        row-gap: 3%;
         justify-self: left;
         justify-items: center;
         margin: 0%;
@@ -353,20 +366,25 @@ a:hover {
 
     #player-score-container {
         row-gap: 2%;
-        font-size: .6em;
+        font-size: .8em;
     }
     #rule-box {
         display: flex;
-        font-size: .6em;
+        font-size: .7em;
         background-color: #cc9263;
         border: thick solid #241401;
         border-radius: 15px;
         padding: 2%;
+        margin: 1%;
         order: 1;
+    }
+
+    #rule-button {
+        display: none;
     }
     .background {
         padding-top: 1%;
-        margin-top: 2%;
+        margin-top: 0%;
         opacity: 85%;
         color: #cc9263;
         font-weight: bolder;
