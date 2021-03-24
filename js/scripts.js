@@ -122,8 +122,9 @@ let songLyrics =
     "too Cold Ice, Ice baby, too cold, too cold"
 ];
 
-var lineRandom = Math.floor(Math.random() * songLyrics.length);
+
 function refreshlyrics () {
+    var lineRandom = Math.floor(Math.random() * songLyrics.length);
     document.getElementById("display-box").innerHTML= (songLyrics[lineRandom] + " . " + chorus).toString().toUpperCase();
 };
 refreshlyrics();
