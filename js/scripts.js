@@ -54,7 +54,6 @@ let totalPointsBox = 1;
 function submitScore() {
     
     const playerElement = document.getElementById("player-name-" +totalPointsBox);
-    console.log(playerElement);
     const pointsElement = document.getElementById("p" +totalPointsBox+ "-points");
     let enteredScore = parseInt(document.getElementById("score-input").value);
         if (totalPointsBox < totalPlayers) {
@@ -137,14 +136,44 @@ function resetDice() {
         };
     };
 };
-// Hide RuleBox -----------------------------------
+// Show RuleBox -----------------------------------
 
 let ruleBox = document.getElementById("rule-box");
 let ruleButton = document.getElementById("rule-button");
 
-ruleButton.addEventListener("click", () => {
+function showRules () {
     if (ruleBox.className === "hide") {
         ruleBox.setAttribute("class", "show");
     } else {
         ruleBox.setAttribute("class", "hide")} 
+};
+
+// Event Listeners -----------------------------------
+
+document.getElementById('reset-button').addEventListener('click', () => {
+    resetDice();
 });
+
+document.getElementById('roll-button').addEventListener('click', () => {
+    rollDice();
+    refreshlyrics();
+});
+
+document.getElementById('rule-button').addEventListener('click', () => {
+    showRules();
+});
+
+document.getElementById('score-submit').addEventListener('click', () => {
+    submitScore();
+    resetDice();
+});
+
+document.getElementById('add-player-button').addEventListener('click', () => {
+    addPlayers();
+});
+
+// document.getElementById('highlight-button').addEventListener('click', () => {
+//     resetDice;
+//});
+
+

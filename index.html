@@ -10,7 +10,7 @@
     <body>
         <header>    
             <h1 id="top">Vanilla Dice
-                <span id="reset-button" onclick="resetDice()">Dice Reset</span>
+                <span id="reset-button">Dice Reset</span>
             </h1>
         </header>   
             <main>
@@ -52,7 +52,6 @@
                             type="button"
                             id="roll-button" 
                             class="button"
-                            onclick="rollDice()"
                         >
                         Roll Dice
                         </button>
@@ -79,7 +78,6 @@
                             type="button" 
                             id="score-submit" 
                             class="button" 
-                            onclick="submitScore()"
                         >
                         Bank Score 
                         </button> 
@@ -94,7 +92,7 @@
                         <li>Begin by rolling six dice.</li>
                         <li>To start, first bank at least 1000 points.</li>
                         <li>After, player can end turn and bank points at any time.</li> 
-                        <li>Each turn, the player must keep at least one scoring dice.</li>
+                        <li>Each roll, the player must keep at least one scoring dice.</li>
                         <li>Turn ends when points are banked or no dice score.</li>
                         <li>If all six dice score, roll all dice again.</li>
                         <li>Dice multiples do not carry over to new six dice roll.</li>
@@ -120,12 +118,12 @@
                 <div id="player-score-container">
                     <div class="inert-player">
                         <button 
-                        type="button"
-                        class="small-button" 
-                        onclick="addPlayers()"
-                    >
-                    + 
-                    </button>    
+                            type="button"
+                            class="small-button"
+                            id="add-player-button" 
+                            >
+                            + 
+                        </button>    
                         <h3 id="title">PLAYERS</h3>      
                     </div>
                     <div class="active-player" id="player-name-1">

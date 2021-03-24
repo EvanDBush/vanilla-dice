@@ -310,6 +310,7 @@ a:hover {
     article {
         flex-basis: auto ;
         min-width: 300px;
+        max-height: fit-content;
     }
 
     div .hide {
@@ -317,7 +318,7 @@ a:hover {
     }
 
     .button {
-        font-size: 1em;
+        font-size: .9em;
         width: 80%;
     }
 
@@ -332,8 +333,8 @@ a:hover {
     .grid-box {
         display: grid;
         grid-template-columns:  155px 155px 155px;
-        column-gap: 3%;
-        row-gap: 3%;
+        column-gap: 2%;
+        row-gap: 2%;
         justify-self: left;
         justify-items: center;
         margin: 0%;
@@ -365,12 +366,12 @@ a:hover {
     }
 
     #player-score-container {
-        row-gap: 2%;
-        font-size: .8em;
+        row-gap: 1%;
+        font-size: 1em;
     }
     #rule-box {
         display: flex;
-        font-size: .7em;
+        font-size: .9em;
         background-color: #cc9263;
         border: thick solid #241401;
         border-radius: 15px;
