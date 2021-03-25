@@ -50,6 +50,10 @@ function clickHighlight(diceOne) {
 
 // Submits score to player ----------------------
 let totalPointsBox = 1;
+// if (!Number.isNaN(parsed)) {
+//  bankScore(parsed);
+//}
+
 
 function submitScore() {
     
@@ -72,7 +76,7 @@ function submitScore() {
         };  
     document.getElementById("score-input").value = 0;
 };
-
+// Displays Song Lyrics
 let chorus = 
 [
     "Ice, Ice Baby",

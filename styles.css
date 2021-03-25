@@ -20,6 +20,10 @@ h1 {
     text-shadow: 5px -5px 5px #241401;
 }
 
+h2 {
+    font-size: 1em;
+}
+
 main {
     display: flex;
     flex-direction: row;
@@ -58,7 +62,7 @@ a {
 
 .grid-box {
     display: grid;
-    grid-template-columns: 155px 155px;
+    grid-template-columns: 150px 150px;
     column-gap: 2%;
     row-gap: 1%;
     justify-items: center;
@@ -261,7 +265,7 @@ a:hover {
     }
 
     h2 {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     header {
@@ -391,6 +395,36 @@ a:hover {
         font-weight: bolder;
     }
 }
+
+/* iTyped V.2 Styles */
+
+.ityped-cursor {
+    font-size: 1em;
+    opacity: 1;
+    -webkit-animation: blink 0.3s infinite;
+    -moz-animation: blink 0.3s infinite;
+    animation: blink 0.3s infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes blink {
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @-webkit-keyframes blink {
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @-moz-keyframes blink {
+    100% {
+      opacity: 0;
+    }
+  }
+
 /* Color Pallet --------------------------------------- */
 
 .food {
