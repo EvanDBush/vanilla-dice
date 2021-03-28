@@ -160,7 +160,7 @@ a {
 }
 
 .pressure-mode {
-    background: radial-gradient(#9725a5 20%, #fd8ec5, #420690 95%);
+    background: linear-gradient(#9725a5, #fd8ec5);
 }
 
 .pressure-mode .highlight {
@@ -174,7 +174,7 @@ a {
 
 .pressure-mode .inert-player {
     background-color: #ff69b4;
-    color: #f8cce2;
+    color: #420690;
     border: medium solid #420690;
 }
 
@@ -186,7 +186,7 @@ a {
 .pressure-mode .button {
     background: #ff69b4;
     color: #420690;
-    border: medium solid #fd8ec5;
+    border: medium solid #420690;
 }
 
 .pressure-mode .small-button{
@@ -209,7 +209,7 @@ a {
 
 .pressure-mode #rule-box {
     color: #420690;
-    background: radial-gradient( #ff69b4 30%, #f8cce2, #420690 95%);
+    background: radial-gradient( #ff69b4, #9725a5);
     border: thick solid #420690;
 }
 
@@ -239,7 +239,7 @@ a {
 }
 
 .pressure-mode .inert-player:nth-of-type(2n) {
-    background-color: #f8cce2;
+    background-color: #bc2dcf;
     color: #420690;
 }
 
