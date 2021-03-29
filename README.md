@@ -8,11 +8,12 @@ Please try out the game at <a href="https://evandbush.github.io/">my project's G
 ***
 
 The inspiration for this project came from playing dice with my family over Zoom. We did it, but it was difficult. Everyone had to have a set of six dice to play and it was hard to roll in a way everyone could see. With this site. no physical dice are needed and everyone can display their own set of dice.
-<div style="display:inline">
-<p>The dice are styled so that each dice face is a set color. This makes matching numbers easier to spot.</p> 
-<img src="img/views/dice-inline.png" style= "align-self: center;">
+
+<p>The dice are styled so that each dice face is a set color. This makes matching numbers easier to spot.</p>
+
+<img src="img/views/dice-inline.png" width= "80%" style= "align-self: center">
+
 <p>This is an advantage over typical monochromatic physical dice. One of the aspects I miss about physical dice is the suspense in rolling, a computer is just too fast. If you have any suggestions on fun ways to add suspense, I'd love to hear them!</p>
-<div>
 
 
 >Which 3+ features you have included from the below lists to meet the requirements
