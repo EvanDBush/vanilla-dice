@@ -1,4 +1,4 @@
-# Vanilla Dice
+i# Vanilla Dice
 
 > Project includes a README file that explains the following:
 A one paragraph or longer description of what your project is
@@ -11,7 +11,7 @@ The inspiration for this project came from playing dice with my family over Zoom
 
 <p>The dice are styled so that each dice face is a set color. This makes matching numbers easier to spot.</p>
 
-<img src="img/views/dice-inline.png" width= "80%">
+<img src="img/views/dice-inline.png" width= "80%"></img>
 
 <p>This is an advantage over typical monochromatic physical dice. One of the aspects I miss about physical dice is the suspense in rolling, a computer is just too fast. If you have any suggestions on fun ways to add suspense, I'd love to hear them!</p>
 
