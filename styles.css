@@ -147,7 +147,7 @@ a {
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    font-size: .5em;
+    font-size: 1em;
     color: #ffbc85;
     background: #603e21;
 }
@@ -273,7 +273,7 @@ a {
     border-radius: 15px;
     padding: 3%;
     color: #ffe4a3;
-    background: linear-gradient(to bottom, #603e21 30%, #cc9263, #603e21 95%);
+    background: #cc9263;
     border: thick solid #ffe4a3;
     border-radius: 15px;
     font-weight: bolder;
@@ -359,7 +359,7 @@ a:hover {
     
 
     #rule-box {
-        margin: 5%;
+        margin: 2%;
         background-color: #cc9263;
         border: thick solid #241401;
         border-radius: 15px;
@@ -397,10 +397,6 @@ a:hover {
         max-height: fit-content;
     }
 
-    div .hide {
-        display: block;
-    }
-
     .button {
         font-size: .9em;
         width: 80%;
@@ -417,8 +413,8 @@ a:hover {
     .grid-box {
         display: grid;
         grid-template-columns:  155px 155px 155px;
-        column-gap: 2%;
-        row-gap: 2%;
+        column-gap: 1%;
+        row-gap: 1%;
         justify-self: left;
         justify-items: center;
         margin: 0%;
@@ -452,6 +448,7 @@ a:hover {
     #player-score-container {
         row-gap: 1%;
         font-size: 1em;
+        margin: 2%;
     }
     #rule-box {
         display: flex;
@@ -460,13 +457,10 @@ a:hover {
         border: thick solid #241401;
         border-radius: 15px;
         padding: 2%;
-        margin: 1%;
+        margin: 2%;
         order: 1;
     }
 
-    #rule-button {
-        display: none;
-    }
     .background {
         padding-top: 1%;
         margin-top: 0%;
@@ -476,6 +470,34 @@ a:hover {
     }
 }
 
+@media (min-width: 1650px) {
+    main {
+        flex-direction: row-reverse;
+        margin: 0%;
+    }
+
+    article {
+        order: 2;
+    }
+
+    .grid-box {
+        max-width: 500px;
+        margin: 5%;
+    }
+
+    #rule-box {
+        max-width: 500px;
+        order: 1;
+        margin: 2%
+    }
+
+    #player-score-container {
+        max-width: 500px;
+        
+
+    }
+
+}
 /* iTyped V.2 Styles */
 
 .ityped-cursor {
