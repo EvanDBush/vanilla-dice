@@ -172,7 +172,7 @@ function clickHighlight(diceOne) {
         chorus = bowieChorus;
         refreshlyrics;
     } else {
-        document.getElementById('body').setAttribute('class','');
+        document.getElementById('body').removeAttribute('class');
         document.getElementById('top').innerHTML = "Vanilla Dice";
         songLyrics = vanillaLyrics;
         chorus = vanillaChorus; 
@@ -198,6 +198,23 @@ function showRules () {
     } else {
         ruleBox.setAttribute("class", "hide")} 
 };
+// Toggle Pressure Mode ------------------------------
+
+function pressureMode () {
+if (document.getElementById('body').className === "pressure-mode") {
+    document.getElementById('body').setAttribute('class','');
+    document.getElementById('top').innerHTML = "Vanilla Dice";
+    document.getElementById('pressure-mode-button').innerHTML = "Pressure Mode: OFF";
+    songLyrics = vanillaLyrics;
+    chorus = vanillaChorus;
+} else {
+    document.getElementById('body').setAttribute('class',"pressure-mode");
+    document.getElementById('top').innerHTML = "Under Pressure Dice";
+    document.getElementById('pressure-mode-button').innerHTML = "Pressure Mode: ON";
+    songLyrics = bowieLyrics;
+    chorus = bowieChorus;
+    refreshlyrics;
+}};
 // Event Listeners -----------------------------------
 
 document.getElementById('reset-button').addEventListener('click', () => {
@@ -222,6 +239,10 @@ document.getElementById('add-player-button').addEventListener('click', () => {
     addPlayers();
 });
 
+document.getElementById('pressure-mode-button').addEventListener('click',() => {
+    pressureMode();
+    refreshlyrics();
+});
 // document.getElementById('highlight-button').addEventListener('click', () => {
 //     resetDice;
 //});

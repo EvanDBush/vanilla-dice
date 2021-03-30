@@ -180,15 +180,25 @@ Enter player name
 
 
 ```
-function addPlayers () {
-    let totalPlayers = parseInt(prompt('How many players? (1-8)'));
-        for (let namePosition = 0; namePosition < totalPlayers; namePosition++) {
-            let playerName = prompt(`Enter a name for Player${namePosition + 1}`);
-            document.querySelector(`#player${namePosition + 1}`).innerHTML = playerName;
-        }; 
-        for (let namePosition = 8; namePosition > totalPlayers; namePosition= namePosition-1) {
-            document.querySelector(`#player-name-${namePosition}`).style.display = 'none';
-        };
+function submitScore() {
+    const playerElement = document.getElementById("player-name-" +totalPointsBox);
+    const pointsElement = document.getElementById("p" +totalPointsBox+ "-points");
+    let enteredScore = parseInt(document.getElementById("score-input").value);
+        if (totalPointsBox < totalPlayers) {
+            let nextPlayer = document.getElementById("player-name-" + (totalPointsBox + 1));
+            pointsElement.innerHTML = enteredScore + parseInt(pointsElement.innerHTML);
+            playerElement.setAttribute("class", "inert-player");
+            nextPlayer.setAttribute("class", "active-player");
+            totalPointsBox = totalPointsBox + 1;
+        } else {  
+            totalPointsBox = totalPlayers;
+            pointsElement.innerHTML = enteredScore + parseInt(pointsElement.innerHTML);
+            playerElement.setAttribute("class", "inert-player");
+            totalPointsBox = 1;
+            let nextPlayer = document.getElementById("player-name-" + totalPointsBox);
+            nextPlayer.setAttribute("class", "active-player");
+        };  
+    document.getElementById("score-input").value = 0;
 };
 ```
 ***
@@ -196,16 +206,24 @@ function addPlayers () {
 2. ### JavaScript mathematical function and displays.
 ***
 ***
-Get Random Number, Add score to previous score.
+> Create a JavaScript function that performs some form of mathematical operation (calculates something) and displays the result on your page or otherwise uses that value to do something on the site.
+
+This Javascript funtion calculates a random number between 1 and 6. First, a random decimal is obtained from the `Math.random()` funtion. Then, that number is multipled by 6 to give us a number with a decimal between 0 and 6. The `Math.floor()` funtion turns that number into a whole number between 0 and 5. By adding 1, a random number between 1 and 6 is produced. This corresponds easily to a dice face to display on the page.
 
 `let myRoll = Math.floor(Math.random() *6) + 1;`
 
-> Create a JavaScript function that performs some form of mathematical operation (calculates something) and displays the result on your page or otherwise uses that value to do something on the site.
+
 ***
 ***
 3. ### Create and populate a JavaScript array and display.
 ***
 ***
+> Create and populate a JavaScript array with one or more values and display the contents of some or all of the array on your page
+
+The first part of the function creates a random number (1-6) and pushes it into an array. The function repeats for each of six dice positions. 
+
+
+
 ```
 function rollDice () {
 
@@ -215,25 +233,29 @@ function rollDice () {
             let myRoll = Math.floor(Math.random() *6) + 1;
             randomArray.push(myRoll);
 ```
+The contents of the array line up with a dice face in a .svg file.
+```
+let diceSVG = `img/small-dice/face${randomArray[dicePosition]}.svg`;
 
-Array of 6 random numbers, display as Dice SVG
-
-> Create and populate a JavaScript array with one or more values and display the contents of some or all of the array on your page
+```   
+After `randomArray[]` is created, the index of the array lines up with the dice positions(+1). 
+```
+    if (document.getElementById(`dice${dicePosition + 1}`)
+```
+The dice position the function is on gets set with an SVG. It's name has the same random number given by the array.   
 
 ```
-let diceSVG = 
-    `img/small-dice/face${randomArray[dicePosition]}.svg`;
-    
-    if (document.getElementById(`dice${dicePosition + 1}`)
-        .className === 'dice') {
             document.querySelector(`.face${dicePosition}`)
             .setAttribute('src', diceSVG);
 ```
+
 ****
 ****
 4. ### Create a Javascript loop that displays HTML.
 ****
 ****
+> Create a Javascript loop that dynamically displays HTML on your page - for example displaying a number of list items based on how many times you loop
+
 
 Displays player names, removes empty
 
@@ -257,12 +279,15 @@ function addPlayers () {
 };
 ```
 
-> Create a Javascript loop that dynamically displays HTML on your page - for example displaying a number of list items <li> based on how many times you loop
+
 ****
 ****
 5. ### Show/hide one or more content areas or elements.
 ****
 ****
+> Show/hide one or more content areas or elements on your site through clicking a button or some other user interaction - must be done with some JavaScript code.
+
+
 ```
 let ruleBox = document.getElementById("rule-box");
 let ruleButton = document.getElementById("rule-button");
@@ -275,4 +300,4 @@ function showRules () {
 };
 ```
 
-> Show/hide one or more content areas or elements on your site through clicking a button or some other user interaction - must be done with some JavaScript code. 
+ 
