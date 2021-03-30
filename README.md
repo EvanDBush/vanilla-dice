@@ -1,8 +1,8 @@
-i# Vanilla Dice
+# Vanilla Dice
 
 > Project includes a README file that explains the following:
 A one paragraph or longer description of what your project is
-#### A dice roller designed to share a game of dice with friends. There are six dice total. To roll a lesser number of dice, click to highlight the dice you do not want to roll. Then click the "Roll Dice" button. Suggested Rules are displayed when the "Rules" button in clicked.
+### A dice game designed to share with friends. There are six dice total. To roll a lesser number of dice, click to highlight the dice you do not want to roll. Then click the "Roll Dice" button. Suggested Rules are displayed when the "Rules" button in clicked.
 ***
 Please try out the game at <a href="https://evandbush.github.io/">my project's Github site!</a>
 ***
@@ -101,7 +101,7 @@ The items are then assigned a column position and fit themselves into rows in th
 ***
 ***
 
-By styling the main section with flexbox, the individual content containers fill the space better at different screen sizes. At first, the containers are displayed one-after-another in a single column. All the content is viewable within two screen lengths. The main functions of the game are available in the initial page display. 
+By styling the main section with flexbox, the individual content containers fill the space better at different screen sizes. At first, the containers are displayed one-after-another in a single column. The main functions of the game are available in the initial page display. 
 ```
 main {
     display: flex;
@@ -128,6 +128,7 @@ main {
         max-height: fit-content;
     }
 ```
+At large screen sizes, all the content can be displayed in a single row. The order is slighly changed so that the dice remain in the center and the players-box displays on the left. Rules display on the right.
 ***
 ***
 3. #### :nth-of-tyoe
@@ -190,15 +191,21 @@ function addPlayers () {
         };
 };
 ```
-
+***
+***
 2. ### JavaScript mathematical function and displays.
-
+***
+***
 Get Random Number, Add score to previous score.
 
+`let myRoll = Math.floor(Math.random() *6) + 1;`
+
 > Create a JavaScript function that performs some form of mathematical operation (calculates something) and displays the result on your page or otherwise uses that value to do something on the site.
-
+***
+***
 3. ### Create and populate a JavaScript array and display.
-
+***
+***
 ```
 function rollDice () {
 
@@ -207,21 +214,26 @@ function rollDice () {
         for (let dicePosition = 0; dicePosition < 6; dicePosition++) {
             let myRoll = Math.floor(Math.random() *6) + 1;
             randomArray.push(myRoll);
-            let diceSVG = `img/small-dice/face${randomArray[dicePosition]}.svg`;
-                if (document.getElementById(`dice${dicePosition + 1}`).className === 'dice') {
-                    document.querySelector(`.face${dicePosition}`).setAttribute('src', diceSVG);
-        };
-    };
-};
-
-
 ```
 
 Array of 6 random numbers, display as Dice SVG
 
 > Create and populate a JavaScript array with one or more values and display the contents of some or all of the array on your page
 
+```
+let diceSVG = 
+    `img/small-dice/face${randomArray[dicePosition]}.svg`;
+    
+    if (document.getElementById(`dice${dicePosition + 1}`)
+        .className === 'dice') {
+            document.querySelector(`.face${dicePosition}`)
+            .setAttribute('src', diceSVG);
+```
+****
+****
 4. ### Create a Javascript loop that displays HTML.
+****
+****
 
 Displays player names, removes empty
 
@@ -246,9 +258,11 @@ function addPlayers () {
 ```
 
 > Create a Javascript loop that dynamically displays HTML on your page - for example displaying a number of list items <li> based on how many times you loop
-
+****
+****
 5. ### Show/hide one or more content areas or elements.
-
+****
+****
 ```
 let ruleBox = document.getElementById("rule-box");
 let ruleButton = document.getElementById("rule-button");
