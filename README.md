@@ -139,7 +139,7 @@ At large screen sizes, all the content can be displayed in a single row. The ord
 
 ***
 ***
-3. #### :nth-of-tyoe
+3. #### :nth-of-type
 
 ***
 ***
@@ -356,7 +356,7 @@ A different color scheme is also hidden behind a button. Actually, five buttons.
 ****
 Thank YOU for reading and trying the game! 
 
-A special Thanks goes out to my mentors: Shannon Beach, Brad Cypert, Dawson Richey, and Jacob Kastenschmidt. Thank you very much for your time and patience!
+A special Thanks goes out to my mentors: Shannon Beach, Brad Cypert, Dawson Richey, and Jacob Kastensmidt. Thank you very much for your time and patience!
 
 
 ****
