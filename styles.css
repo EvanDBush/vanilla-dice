@@ -38,9 +38,11 @@ h3 {
     text-align: center;
 }
 
+
+
 li img {
     position: relative;
-    top: 10px;
+    top: 6px;
 }
 
 span {
@@ -479,7 +481,7 @@ a:hover {
     }
 
     #rule-box {
-        max-width: 500px;
+        max-width: 600px;
         order: 1;
         margin: 2%
     }
