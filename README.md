@@ -1,4 +1,4 @@
-# Vanilla Dice
+d# Vanilla Dice
 
 > Project includes a README file that explains the following:
 A one paragraph or longer description of what your project is
@@ -20,12 +20,29 @@ The inspiration for this project came from playing dice with my family over Zoom
 <p>This is an advantage over typical monochromatic physical dice. One of the aspects I miss about physical dice is the suspense in rolling, a computer is just too fast. If you have any suggestions on fun ways to add suspense, I'd love to hear them!</p>
 
 
->Which 3+ features you have included from the below lists to meet the requirements
+<div style = "height: 25vh; margin: 5%">
+    <div style="float: left;">
+        <u>CSS Features</u>
+        <ol>
+            <li>CSS Grid</li>
+            <li>CSS Flexbox</li>
+            <li>:nth-of-type</li>
+        </ol>
+    </div>
+    <div style="float: right;">
+        <u>JavaScript Features</u>
+        <ol>
+            <li>Submit form, display</li>
+            <li>Perform Math function, display</li>
+            <li>Create Array and populate, display</li>
+            <li>Create JavaScript loop, display</li>
+            <li>Show/Hide content elements.</li>
+        </ol>
+    </div>
+</div>
 
->If needed, any special instructions required for the reviewer to run your project
-
->The readme should be called readme.md or readme.txt and located in the top level of your project folder so that GitHub automatically displays it when viewing your project on GitHub
-
+****
+****
 
 ## CSS Features
 >Choose at least 1 item on the CSS Features List below and implement it in your project
