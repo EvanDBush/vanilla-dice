@@ -1,4 +1,4 @@
-d# Vanilla Dice
+# Vanilla Dice
 
 > Project includes a README file that explains the following:
 A one paragraph or longer description of what your project is
